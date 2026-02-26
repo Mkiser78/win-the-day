@@ -33,7 +33,16 @@ nav a:hover {
   color: #16a34a;
 }
 
+.hero :before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+}
+
 .hero {
+  position: relative;
+}
   padding: 200px 20px;
   text-align: center;
   background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
