@@ -1,86 +1,19 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Win the Day</title>
+
 <style>
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #111;
+  background: #000;
   color: #fff;
 }
-..hero {
-  position: relative;
-  background: url('https://images.unsplash.com/photo-1517832606294-7e0c10f9d4fb') center/cover no-repeat;
-  padding: 220px 20px;
-  text-align: center;
-}
 
-.overlay {
-  background: rgba(0,0,0,0.75);
-  padding: 60px 20px;
-}
-
-.statement {
-  font-size: 26px;
-  letter-spacing: 3px;
-  color: #facc15;
-  margin-bottom: 10px;
-}
-
-.title {
-  font-size: 64px;
-  font-weight: 900;
-  margin-bottom: 20px;
-}
-
-.subtext {
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: 20px;
-  line-height: 1.6;
-}
-
-.button {transition: 0.3s ease;
-border-radius: 4px;
-}
-
-.button:hover {
-  background-color: #0f7a33;
-  transform: translateY(-2px);  background-color: #16a34a;
-  color: white;
-  padding: 16px 36px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 30px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}.section {
-  padding: 80px 20px;
-  text-align: center;
-}
-.columns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-}
-.column {
-  max-width: 300px;
-}
-.footer {
-  background: #000;
-  text-align: center;
-  padding: 40px 20px;
-  margin-top: 60px;
-}
-@media (max-width: 768px) {
-  .columns {
-    flex-direction: column;
-  }
-}nav {
+nav {
   background: #000;
   padding: 20px 40px;
   display: flex;
@@ -98,24 +31,64 @@ nav a {
 
 nav a:hover {
   color: #16a34a;
-  .button {
-  background-color: #16a34a;
-  color: #ffffff !important;
+}
+
+.hero {
+  padding: 200px 20px;
+  text-align: center;
+  background: #000;
+}
+
+.statement {
+  font-size: 24px;
+  letter-spacing: 3px;
+  color: #facc15;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.subtext {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.button {
+  background: #16a34a;
+  color: #fff;
   padding: 16px 36px;
-  text-decoration: none !important;
+  text-decoration: none;
   display: inline-block;
   margin-top: 30px;
   font-weight: bold;
   letter-spacing: 1px;
   border-radius: 4px;
-  transition: 0.3s ease;
 }
 
 .button:hover {
-  background-color: #0f7a33;
-  transform: translateY(-2px);
-}}  </style>
+  background: #0f7a33;
+}
+
+.section {
+  padding: 100px 20px;
+  text-align: center;
+  background: #111;
+}
+
+.footer {
+  background: #000;
+  text-align: center;
+  padding: 40px 20px;
+}
+</style>
 </head>
+
 <body>
 
 <nav>
@@ -128,46 +101,22 @@ nav a:hover {
 </nav>
 
 <section class="hero">
-  <div class="overlay">
-    <h2 class="statement">THIS IS BROTHERHOOD.</h2>
-    <h1 class="title">WIN THE DAY</h1>
-    <p class="subtext">
-      Men are done pretending.  
-      Done carrying it alone.  
-      This is where men show up, speak up, and build strength together.
-    </p>
-    <a href="meetings.html" class="button">JOIN A MEETING</a>  </div>
+  <div class="statement">THIS IS BROTHERHOOD.</div>
+  <div class="title">WIN THE DAY</div>
+  <div class="subtext">
+    Men are done pretending. Done carrying it alone.
+    This is where men show up, speak up, and build strength together.
+  </div>
+  <a href="meetings.html" class="button">JOIN A MEETING</a>
 </section>
+
 <section class="section">
   <h2>STRONG MEN TALK.</h2>
   <p>Strength isn’t silence. Strength is showing up. Strength is being honest and refusing to quit.</p>
 </section>
 
-<section class="section">
-  <h2>WHAT WIN THE DAY STANDS FOR</h2>
-  <div class="columns">
-    <div class="column">
-      <h3>BROTHERHOOD</h3>
-      <p>No masks. No ego. Just men standing shoulder to shoulder.</p>
-    </div>
-    <div class="column">
-      <h3>ACCOUNTABILITY</h3>
-      <p>We challenge each other to grow mentally, physically, emotionally.</p>
-    </div>
-    <div class="column">
-      <h3>MENTAL RESILIENCE</h3>
-      <p>We talk about what most men were taught to hide.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>MEN ARE STRUGGLING.</h2>
-  <p>Suicide remains one of the leading causes of death among men. Most never ask for help. We are changing that.</p>
-</section>
-
 <div class="footer">
-  <p>© 2026 Win the Day | Relationships • Brotherhood • Community</p>
+  © 2026 Win the Day
 </div>
 
 </body>
