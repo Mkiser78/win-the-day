@@ -1,113 +1,93 @@
-<<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Win the Day</title>
+  <meta charset="UTF-8">
+  <title>Win the Day</title>
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #000;
-  color: #fff;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: white;
+    }
 
-nav {
-  background: #000;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    nav {
+      background: #000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+    }
 
-nav a {
-  color: #facc15;
-  text-decoration: none;
-  margin-left: 25px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
+    nav a {
+      color: #facc15;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
 
-nav a:hover {
-  color: #16a34a;
-}
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-image: url("https://images.pexels.com/photos/7450457/pexels-photo-7450457.jpeg");
+      background-size: cover;
+      background-position: center;
+    }
 
-.hero {
-  padding: 220px 20px;
-  text-align: center;
-  background-image: url("https://images.pexels.com/photos/7450457/pexels-photo-7450457.jpeg");
-  background-size: cover;
-  background-position: center;
-}
+    .hero h1 {
+      font-size: 64px;
+      margin: 0;
+    }
 
-.statement {
-  font-size: 22px;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
-  color: #facc15;
-}
+    .hero h2 {
+      font-size: 22px;
+      letter-spacing: 3px;
+      color: #facc15;
+      margin-bottom: 20px;
+    }
 
-.title {
-  font-size: 64px;
-  font-weight: 900;
-  margin-bottom: 20px;
-}
+    .hero p {
+      max-width: 600px;
+      font-size: 20px;
+      line-height: 1.6;
+    }
 
-.subtext {
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: 20px;
-  line-height: 1.6;
-}
-
-.button {
-  background: #16a34a;
-  color: #fff;
-  padding: 16px 36px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 30px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  border-radius: 4px;
-}
-
-.button:hover {
-  background: #0f7a33;
-}
-</style>
+    .button {
+      background: #16a34a;
+      padding: 15px 35px;
+      margin-top: 30px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <div><strong>WIN THE DAY</strong></div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="events.html">Events</a>
-    <a href="meetings.html">Meetings</a>
-  </div>
-</nav>
+  <nav>
+    <div>WIN THE DAY</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="meetings.html">Meetings</a>
+    </div>
+  </nav>
 
-<section class="hero">
-  <div class="statement">THIS IS BROTHERHOOD.</div>
-  <div class="title">WIN THE DAY</div>
-  <div class="subtext">
-    Men are done pretending. Done carrying it alone.
-    This is where men show up, speak up, and build strength together.
-  </div>
-  <a href="meetings.html" class="button">JOIN A MEETING</a>
-</section>
-
-<section class="section">
-  <h2>STRONG MEN TALK.</h2>
-  <p>Strength isn’t silence. Strength is showing up. Strength is being honest and refusing to quit.</p>
-</section>
-
-<div class="footer">
-  © 2026 Win the Day
-</div>
+  <section class="hero">
+    <h2>THIS IS BROTHERHOOD.</h2>
+    <h1>WIN THE DAY</h1>
+    <p>
+      Men are done pretending. Done carrying it alone.
+      This is where men show up, speak up, and build strength together.
+    </p>
+    <a href="meetings.html" class="button">JOIN A MEETING</a>
+  </section>
 
 </body>
 </html>
