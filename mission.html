@@ -28,22 +28,35 @@ nav {
   height: 70px;
 }
 
+/* Animated Nav */
 .nav-links a {
+  position: relative;
   color: #facc15;
   text-decoration: none;
   margin-left: 30px;
   font-weight: bold;
   font-size: 18px;
-  padding-bottom: 5px;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  opacity: 0.7;
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #16a34a;
+  transition: width 0.3s ease;
 }
 
-/* ACTIVE TAB */
-.nav-links a.active {
-  border-bottom: 3px solid #16a34a;
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a.active::after {
+  width: 100%;
 }
 
 .mission-page {
