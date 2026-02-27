@@ -5,9 +5,6 @@
 <title>Win the Day</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Social Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
 html, body {
   margin: 0;
@@ -148,7 +145,7 @@ nav {
   color: #facc15;
 }
 
-/* Rock Event */
+/* Rock Event Layout */
 .rock-event {
   display: flex;
   justify-content: space-between;
@@ -168,6 +165,14 @@ nav {
   text-align: center;
 }
 
+.involved-intro {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
 .involved-grid {
   display: flex;
   flex-wrap: wrap;
@@ -180,23 +185,12 @@ nav {
   padding: 30px;
   max-width: 320px;
   border-radius: 10px;
+  text-align: left;
 }
 
-/* SOCIAL */
-.social-links {
-  margin-bottom: 20px;
-}
-
-.social-links a {
+.involved-card h3 {
   color: #facc15;
-  font-size: 22px;
-  margin: 0 12px;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-links a:hover {
-  color: #16a34a;
-  transform: translateY(-3px);
+  margin-bottom: 15px;
 }
 
 /* FOOTER */
@@ -280,6 +274,13 @@ footer {
 <section class="events" id="events">
   <h2>Upcoming Events</h2>
 
+  <div class="event-card">
+    <h3>Men’s Mental Health Support Group</h3>
+    <p><strong>Date:</strong> February 28</p>
+    <p><strong>Time:</strong> 11AM – 2PM</p>
+    <p><strong>Location:</strong> Rowan County Public Library</p>
+  </div>
+
   <div class="event-card rock-event">
     <div>
       <h3>Rock Your Mental</h3>
@@ -288,7 +289,7 @@ footer {
       <p><strong>Location:</strong> Carl D. Perkins Center, Morehead, KY</p>
     </div>
     <div class="rock-image">
-      <img src="Rock your mental.png">
+      <img src="Rock your mental.png" alt="Rock Your Mental Flyer">
     </div>
   </div>
 
@@ -296,21 +297,34 @@ footer {
 
 <section class="get-involved" id="get-involved">
   <h2>Get Involved</h2>
+  <p class="involved-intro">
+    If you believe in breaking the stigma and building brotherhood,
+    there’s a place for you here.
+  </p>
+
   <div class="involved-grid">
     <div class="involved-card">
       <h3>Attend</h3>
+      <p>Show up. Speak up. Build connection and accountability.</p>
       <a href="mailto:mitchkiser@wintheday.site" class="button">Attend</a>
+    </div>
+
+    <div class="involved-card">
+      <h3>Volunteer</h3>
+      <p>Help support events and outreach across Eastern Kentucky.</p>
+      <a href="mailto:mitchkiser@wintheday.site" class="button">Volunteer</a>
+    </div>
+
+    <div class="involved-card">
+      <h3>Donate</h3>
+      <p>Support men’s mental health initiatives and community events.</p>
+      <a href="mailto:mitchkiser@wintheday.site" class="button">Donate</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="social-links">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-youtube"></i></a>
-  </div>
-  <p>© 2026 Win the Day | Brotherhood • Community • Strength</p>
+  © 2026 Win the Day | Brotherhood • Community • Strength
 </footer>
 
 </body>
