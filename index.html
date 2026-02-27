@@ -125,7 +125,7 @@ nav {
   background: #1a1a1a;
   padding: 30px;
   margin: 25px auto;
-  max-width: 700px;
+  max-width: 900px;
   border-radius: 8px;
   border-left: 4px solid #16a34a;
   text-align: left;
@@ -139,6 +139,32 @@ nav {
 .event-card p {
   margin: 6px 0;
   line-height: 1.5;
+}
+
+/* Rock Event Layout */
+.rock-event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.rock-image img {
+  width: 250px;
+  border-radius: 8px;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .rock-event {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .rock-image img {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 /* GET INVOLVED */
@@ -233,26 +259,19 @@ footer {
     <p><strong>Location:</strong> Rowan County Public Library</p>
   </div>
 
-  <div class="event-card">
-    <h3>Men’s Mental Health Support Group</h3>
-    <p><strong>Date:</strong> March 28</p>
-    <p><strong>Time:</strong> 11AM – 2PM</p>
-    <p><strong>Location:</strong> Rowan County Public Library</p>
+  <div class="event-card rock-event">
+    <div>
+      <h3>Rock Your Mental</h3>
+      <p><strong>Date:</strong> June 13</p>
+      <p><strong>Time:</strong> 4PM – 10PM</p>
+      <p><strong>Location:</strong> Carl D. Perkins Center, Morehead, KY</p>
+    </div>
+
+    <div class="rock-image">
+      <img src="Rock your mental.png" alt="Rock Your Mental Flyer">
+    </div>
   </div>
 
-  <div class="event-card">
-    <h3>Men’s Mental Health Support Group</h3>
-    <p><strong>Date:</strong> April 24</p>
-    <p><strong>Time:</strong> 11AM – 2PM</p>
-    <p><strong>Location:</strong> Rowan County Public Library</p>
-  </div>
-
-  <div class="event-card">
-    <h3>Rock Your Mental</h3>
-    <p><strong>Date:</strong> June 13</p>
-    <p><strong>Time:</strong> 4PM – 10PM</p>
-    <p><strong>Location:</strong> Carl D. Perkins Center, Morehead, KY</p>
-  </div>
 </section>
 
 <section class="get-involved" id="get-involved">
