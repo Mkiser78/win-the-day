@@ -14,26 +14,27 @@
     }
 
     /* NAVIGATION */
-   nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 40px;
-  background-color: black;
-}
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 40px;
+      background-color: black;
+    }
 
-.logo-container img {
-  height: 240px;
-  width: auto;
-  display: block;
-}
+    .logo-container img {
+      height: 75px;
+      width: auto;
+      display: block;
+    }
 
-.nav-links a {
-  color: #facc15;
-  text-decoration: none;
-  margin-left: 30px;
-  font-weight: bold;
-}    }
+    .nav-links a {
+      color: #facc15;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: bold;
+      font-size: 18px;
+    }
 
     .nav-links a:hover {
       opacity: 0.7;
@@ -49,13 +50,20 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      position: relative;
     }
 
     .overlay {
       background: rgba(0, 0, 0, 0.55);
-      padding: 40px;
+      padding: 50px 20px;
       width: 100%;
+    }
+
+    .hero-logo {
+      height: 160px;
+      max-width: 90%;
+      width: auto;
+      display: block;
+      margin: 0 auto 25px auto;
     }
 
     .statement {
@@ -111,14 +119,21 @@
 
   <section class="hero">
     <div class="overlay">
-      <img src="logo.png" alt="Win the Day Logo" class="hero-logo">     
+
+      <!-- BIG HERO LOGO -->
+      <img src="logo.png" alt="Win the Day Logo" class="hero-logo">
+
       <div class="statement">THIS IS BROTHERHOOD.</div>
+
       <div class="title">WIN THE DAY</div>
+
       <div class="subtext">
-        Men are done pretending. Done carrying it alone. 
+        Men are done pretending. Done carrying it alone.
         This is where men show up, speak up, and build strength together.
       </div>
+
       <a href="meetings.html" class="button">JOIN A MEETING</a>
+
     </div>
   </section>
 
