@@ -21,7 +21,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 18px 40px;
   background: black;
 }
 
@@ -33,6 +33,7 @@ nav {
   margin-left: 30px;
   text-decoration: none;
   font-weight: bold;
+  letter-spacing: 0.5px;
 }
 
 .nav-links a::after {
@@ -66,39 +67,41 @@ nav {
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.6));
+  background:linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.65));
 }
 
 .hero-content {
   position:relative;
   z-index:2;
-  max-width:800px;
+  max-width:850px;
   padding:20px;
 }
 
-.hero-logo { height:200px; margin-bottom:25px; }
+.hero-logo { height:190px; margin-bottom:25px; }
 
 .statement {
   font-size:18px;
   letter-spacing:3px;
   font-weight:bold;
+  opacity:0.9;
 }
 
 .title {
-  font-size:60px;
+  font-size:58px;
   font-weight:900;
   margin:10px 0;
 }
 
 .subtext {
-  font-size:20px;
-  line-height:1.6;
+  font-size:21px;
+  line-height:1.7;
+  opacity:0.95;
 }
 
 .button {
   display:inline-block;
-  margin-top:30px;
-  padding:15px 40px;
+  margin-top:35px;
+  padding:16px 45px;
   background:#16a34a;
   color:white;
   text-decoration:none;
@@ -111,98 +114,114 @@ nav {
 
 /* IMPACT */
 .impact {
-  background:#111;
-  padding:100px 20px;
+  background:#0f0f0f;
+  padding:110px 20px;
   text-align:center;
 }
 
 .impact h2 {
-  font-size:42px;
-  margin-bottom:20px;
+  font-size:44px;
+  margin-bottom:25px;
   color:#facc15;
 }
 
 .impact p {
-  max-width:800px;
+  max-width:820px;
   margin:0 auto;
   font-size:22px;
-  line-height:1.7;
+  line-height:1.8;
 }
 
 /* FEATURED */
 .featured {
-  padding:100px 20px;
+  padding:110px 20px;
   text-align:center;
 }
 
 .featured h2 {
-  font-size:40px;
-  margin-bottom:40px;
+  font-size:38px;
+  margin-bottom:50px;
 }
 
 .feature-box {
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:50px;
+  gap:60px;
   flex-wrap:wrap;
 }
 
 .feature-box img {
-  width:300px;
-  border-radius:12px;
+  width:320px;
+  border-radius:14px;
 }
 
 .feature-details {
-  max-width:500px;
+  max-width:520px;
   text-align:left;
 }
 
 .feature-details h3 {
   color:#facc15;
-  font-size:28px;
+  font-size:30px;
+  margin-bottom:10px;
+}
+
+.feature-details p {
+  line-height:1.7;
 }
 
 /* EVENTS */
 .events {
   background:#111;
-  padding:80px 20px;
+  padding:90px 20px;
   text-align:center;
+}
+
+.events h2 {
+  margin-bottom:40px;
 }
 
 .event-card {
   background:#1a1a1a;
   padding:30px;
-  margin:20px auto;
-  max-width:700px;
+  margin:25px auto;
+  max-width:720px;
   border-radius:10px;
   border-left:4px solid #16a34a;
   text-align:left;
+  transition:0.3s ease;
 }
 
-/* CTA (UPDATED SMALLER) */
+.event-card:hover {
+  transform:translateY(-4px);
+}
+
+/* CTA */
 .cta {
   background:#16a34a;
-  padding:55px 20px;
+  padding:60px 20px;
   text-align:center;
   color:white;
 }
 
 .cta h2 {
   font-size:30px;
-  margin-bottom:15px;
+  margin-bottom:18px;
   letter-spacing:1px;
 }
 
 .cta p {
-  font-size:16px;
-  margin-bottom:20px;
+  font-size:17px;
+  max-width:600px;
+  margin:0 auto 25px auto;
+  line-height:1.6;
 }
 
 .cta a {
   background:black;
   color:white;
-  padding:14px 35px;
+  padding:15px 40px;
   border-radius:8px;
   text-decoration:none;
   font-weight:bold;
@@ -211,12 +230,12 @@ nav {
 /* SOCIAL */
 .social-links {
   text-align:center;
-  margin:30px 0;
+  margin:35px 0;
 }
 
 .social-links a {
   color:#facc15;
-  font-size:36px;
+  font-size:34px;
   margin:0 18px;
   transition:0.3s;
 }
@@ -260,21 +279,22 @@ footer {
 <section class="hero">
   <div class="hero-content">
     <img src="logo.png" class="hero-logo">
-    <div class="statement">THIS IS BROTHERHOOD.</div>
+    <div class="statement">THIS IS STRENGTH.</div>
     <div class="title">WIN THE DAY</div>
     <div class="subtext">
-      Show up stronger. Speak up boldly. Build resilience together.
+      You don’t have to carry it alone.
+      Show up stronger. Stand shoulder to shoulder.
     </div>
-    <a href="#events" class="button">JOIN US</a>
+    <a href="#events" class="button">Join Us</a>
   </div>
 </section>
 
 <section class="impact">
-  <h2>Men Are Done Carrying It Alone</h2>
+  <h2>Stronger Together.</h2>
   <p>
-    Too many men suffer in silence. Too many battles are fought alone.
-    Win the Day exists to break stigma, build strength, and create
-    real brotherhood that changes lives.
+    Too many men fight silent battles. Win the Day exists to create
+    real connection, real accountability, and real resilience —
+    so no man walks alone.
   </p>
 </section>
 
@@ -286,7 +306,7 @@ footer {
       <h3>Rock Your Mental</h3>
       <p><strong>June 13 | 4PM – 10PM</strong></p>
       <p>Carl D. Perkins Center, Morehead, KY</p>
-      <p>Live music. Community. Breaking stigma together.</p>
+      <p>Live music. Real conversations. Community that builds strength.</p>
     </div>
   </div>
 </section>
@@ -312,8 +332,11 @@ footer {
 
 <section class="cta">
   <h2>WIN THE DAY — TOGETHER.</h2>
-  <p>Show up. Speak up. Win the day.</p>
-  <a href="mailto:mitchkiser@wintheday.site">Get Involved</a>
+  <p>
+    Stand shoulder to shoulder with men choosing strength.
+    You belong here.
+  </p>
+  <a href="mailto:mitchkiser@wintheday.site">Step Into Strength</a>
 </section>
 
 <div class="social-links">
