@@ -152,6 +152,35 @@ nav {
   line-height:1.6;
 }
 
+/* FEATURED EVENT */
+.featured {
+  padding:110px 20px;
+  text-align:center;
+}
+
+.feature-box {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:60px;
+  flex-wrap:wrap;
+}
+
+.feature-box img {
+  width:320px;
+  border-radius:14px;
+}
+
+.feature-details {
+  max-width:500px;
+  text-align:left;
+}
+
+.feature-details h3 {
+  color:#facc15;
+  margin-bottom:10px;
+}
+
 /* WHAT TO EXPECT */
 .expect {
   background:#0f0f0f;
@@ -196,6 +225,33 @@ nav {
   border-radius:10px;
   border-left:4px solid #16a34a;
   text-align:left;
+}
+
+/* GET INVOLVED */
+.get-involved {
+  background:#0f0f0f;
+  padding:100px 20px;
+  text-align:center;
+}
+
+.involved-grid {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+  margin-top:40px;
+}
+
+.involved-card {
+  background:#111;
+  padding:30px;
+  max-width:320px;
+  border-radius:10px;
+  text-align:left;
+}
+
+.involved-card h3 {
+  color:#facc15;
 }
 
 /* CTA */
@@ -250,6 +306,7 @@ footer {
   .title{font-size:38px;}
   .hero-logo{height:160px;}
   .quote-text{font-size:24px;}
+  .feature-box{flex-direction:column;}
 }
 </style>
 </head>
@@ -264,6 +321,7 @@ footer {
     <a href="index.html" class="active">Home</a>
     <a href="mission.html">Mission</a>
     <a href="#events">Events</a>
+    <a href="#get-involved">Get Involved</a>
     <a href="contact.html">Contact</a>
   </div>
 </nav>
@@ -292,6 +350,19 @@ footer {
 <section class="quote-section">
   <div class="quote-text">
     “What you're doing may save a life.”
+  </div>
+</section>
+
+<section class="featured">
+  <h2>Featured Event</h2>
+  <div class="feature-box">
+    <img src="Rock your mental.png">
+    <div class="feature-details">
+      <h3>Rock Your Mental</h3>
+      <p><strong>June 13 | 4PM – 10PM</strong></p>
+      <p>Carl D. Perkins Center, Morehead, KY</p>
+      <p>Live music. Real conversations. Community that builds strength.</p>
+    </div>
   </div>
 </section>
 
@@ -330,11 +401,34 @@ footer {
   </div>
 </section>
 
+<section class="get-involved" id="get-involved">
+  <h2>Get Involved</h2>
+  <p>Stand shoulder to shoulder with men choosing strength.</p>
+
+  <div class="involved-grid">
+    <div class="involved-card">
+      <h3>Attend</h3>
+      <p>Show up. Speak up. Grow stronger together.</p>
+      <a href="mailto:mitchkiser@wintheday.site" class="button">Attend</a>
+    </div>
+
+    <div class="involved-card">
+      <h3>Volunteer</h3>
+      <p>Help build something that changes lives.</p>
+      <a href="mailto:mitchkiser@wintheday.site" class="button">Volunteer</a>
+    </div>
+
+    <div class="involved-card">
+      <h3>Partner</h3>
+      <p>Back a movement that builds strength in men.</p>
+      <a href="mailto:mitchkiser@wintheday.site" class="button">Partner</a>
+    </div>
+  </div>
+</section>
+
 <section class="cta">
   <h2>WIN THE DAY — TOGETHER.</h2>
-  <p>
-    Show up once. See what happens.
-  </p>
+  <p>Show up once. See what happens.</p>
   <a href="mailto:mitchkiser@wintheday.site">Reach Out Directly</a>
 </section>
 
