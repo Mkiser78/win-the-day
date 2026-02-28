@@ -14,6 +14,7 @@ body {
   color:white;
 }
 
+/* NAV */
 nav {
   display:flex;
   justify-content:space-between;
@@ -25,6 +26,7 @@ nav {
 .nav-logo img { height:70px; }
 
 .nav-links a {
+  position:relative;
   color:#facc15;
   margin-left:30px;
   text-decoration:none;
@@ -35,27 +37,62 @@ nav {
   border-bottom:3px solid #16a34a;
 }
 
+/* MERCH SECTION */
 .merch-section {
   padding:120px 20px;
   text-align:center;
-  max-width:800px;
+  max-width:900px;
   margin:0 auto;
 }
 
 .merch-section h1 {
-  font-size:48px;
-  margin-bottom:20px;
+  font-size:52px;
+  margin-bottom:15px;
+}
+
+.merch-sub {
+  font-size:20px;
+  opacity:0.85;
+  margin-bottom:40px;
+}
+
+.product-box {
+  background:#111;
+  padding:50px 30px;
+  border-radius:14px;
+  margin-bottom:40px;
+}
+
+.product-box img {
+  width:260px;
+  margin-bottom:30px;
+  border-radius:12px;
+}
+
+.price {
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.purpose {
+  opacity:0.8;
+  margin-bottom:30px;
 }
 
 .button {
   display:inline-block;
-  margin:15px;
-  padding:15px 40px;
+  margin:12px;
+  padding:16px 45px;
   background:#16a34a;
   color:white;
   text-decoration:none;
   font-weight:bold;
   border-radius:8px;
+  transition:0.3s ease;
+}
+
+.button:hover {
+  transform:scale(1.05);
 }
 
 .button.secondary {
@@ -65,8 +102,12 @@ nav {
 
 .notice {
   margin-top:30px;
-  opacity:0.7;
+  opacity:0.6;
   font-size:14px;
+}
+
+@media(max-width:768px){
+  .merch-section h1 { font-size:38px; }
 }
 </style>
 </head>
@@ -87,20 +128,39 @@ nav {
 </nav>
 
 <section class="merch-section">
-  <h1>Wear the Movement</h1>
-  <p>WIN THE DAY Logo Tee — $25</p>
 
-  <a href="https://forms.gle/SNeyLwd5mwSF43U99" target="_blank" class="button secondary">
-    Step 1: Fill Out Order Form
-  </a>
-
-  <a href="https://buy.stripe.com/6oUaEZc4n1AYaqk5Klfw400" target="_blank" class="button">
-    Step 2: Complete Payment
-  </a>
-
-  <div class="notice">
-    Orders are processed after BOTH the order form and payment are completed.
+  <h1>Stand With the Movement</h1>
+  <div class="merch-sub">
+    Wear the mission. Represent strength.
   </div>
+
+  <div class="product-box">
+
+    <!-- If you upload a shirt image, name it shirt.png -->
+    <img src="shirt.png" alt="Win the Day Shirt">
+
+    <div class="price">
+      WIN THE DAY Logo Tee — $25
+    </div>
+
+    <div class="purpose">
+      100% of proceeds support men’s mental health initiatives and community events.
+    </div>
+
+    <a href="https://forms.gle/SNeyLwd5mwSF43U99" target="_blank" class="button secondary">
+      Step 1: Fill Out Order Form
+    </a>
+
+    <a href="https://buy.stripe.com/6oUaEZc4n1AYaqk5Klfw400" target="_blank" class="button">
+      Step 2: Complete Payment
+    </a>
+
+    <div class="notice">
+      Orders are processed after BOTH the order form and payment are completed.
+    </div>
+
+  </div>
+
 </section>
 
 </body>
