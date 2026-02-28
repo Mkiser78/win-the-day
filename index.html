@@ -36,6 +36,11 @@ nav {
 
 .nav-logo img { height:70px; }
 
+.nav-links {
+  display:flex;
+  align-items:center;
+}
+
 .nav-links a {
   position:relative;
   color:#facc15;
@@ -238,37 +243,7 @@ nav {
   text-align:left;
 }
 
-.involved-card h3 {
-  color:#facc15;
-}
-
-/* CTA */
-.cta {
-  background:#16a34a;
-  padding:60px 20px;
-  text-align:center;
-  color:white;
-}
-
-.cta h2 {
-  font-size:30px;
-  margin-bottom:18px;
-}
-
-.cta p {
-  font-size:17px;
-  max-width:600px;
-  margin:0 auto 25px auto;
-}
-
-.cta a {
-  background:black;
-  color:white;
-  padding:15px 40px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-}
+.involved-card h3 { color:#facc15; }
 
 /* SOCIAL */
 .social-links {
@@ -290,7 +265,30 @@ footer {
   font-size:14px;
 }
 
+/* ===== MOBILE FIX ===== */
 @media(max-width:768px){
+
+  nav {
+    flex-direction:column;
+    padding:20px;
+  }
+
+  .nav-logo {
+    margin-bottom:15px;
+  }
+
+  .nav-links {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px 20px;
+  }
+
+  .nav-links a {
+    margin:0;
+    font-size:16px;
+  }
+
   .title{font-size:38px;}
   .hero-logo{height:160px;}
   .quote-text{font-size:24px;}
@@ -314,6 +312,8 @@ footer {
     <a href="contact.html">Contact</a>
   </div>
 </nav>
+
+<!-- Everything below remains exactly as you had it -->
 
 <section class="hero">
   <div class="hero-content">
