@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Merch | Win the Day</title>
+<title>Shop | Win the Day</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
+html, body {
   margin:0;
   padding:0;
   font-family:Arial, Helvetica, sans-serif;
@@ -33,66 +33,94 @@ nav {
   font-weight:bold;
 }
 
-.nav-links a.active {
-  border-bottom:3px solid #16a34a;
+.nav-links a::after {
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  height:3px;
+  background:#16a34a;
+  transition:0.3s ease;
 }
 
-/* MERCH SECTION */
-.merch-section {
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width:100%;
+}
+
+/* SHOP SECTION */
+.shop-section {
   padding:120px 20px;
   text-align:center;
+}
+
+.shop-section h1 {
+  font-size:52px;
+  margin-bottom:10px;
+}
+
+.shop-section p.subtitle {
+  opacity:0.8;
+  margin-bottom:60px;
+  font-size:18px;
+}
+
+/* PRODUCT CARD */
+.product-card {
   max-width:900px;
   margin:0 auto;
-}
-
-.merch-section h1 {
-  font-size:52px;
-  margin-bottom:15px;
-}
-
-.merch-sub {
-  font-size:20px;
-  opacity:0.85;
-  margin-bottom:40px;
-}
-
-.product-box {
   background:#111;
-  padding:50px 30px;
-  border-radius:14px;
-  margin-bottom:40px;
+  border-radius:18px;
+  padding:60px 40px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:60px;
+  box-shadow:0 0 40px rgba(0,0,0,0.6);
 }
 
-.product-box img {
+/* IMAGE WRAPPER */
+.product-image {
+  background:#1a1a1a;
+  padding:30px;
+  border-radius:16px;
+}
+
+.product-image img {
   width:260px;
-  margin-bottom:30px;
-  border-radius:12px;
+  display:block;
+}
+
+/* PRODUCT DETAILS */
+.product-details {
+  max-width:400px;
+  text-align:left;
+}
+
+.product-details h2 {
+  font-size:28px;
+  margin-bottom:10px;
 }
 
 .price {
   font-size:22px;
-  margin-bottom:10px;
-}
-
-.purpose {
-  opacity:0.8;
+  color:#facc15;
   margin-bottom:30px;
 }
 
+/* BUTTONS */
 .button {
   display:inline-block;
-  margin:12px;
-  padding:16px 45px;
+  margin:10px 0;
+  padding:15px 40px;
   background:#16a34a;
   color:white;
   text-decoration:none;
   font-weight:bold;
   border-radius:8px;
-  transition:0.3s ease;
-}
-
-.button:hover {
-  transform:scale(1.05);
+  transition:0.3s;
 }
 
 .button.secondary {
@@ -100,14 +128,25 @@ nav {
   color:black;
 }
 
-.notice {
-  margin-top:30px;
-  opacity:0.6;
-  font-size:14px;
+.button:hover {
+  transform:scale(1.05);
 }
 
+.notice {
+  margin-top:30px;
+  font-size:14px;
+  opacity:0.6;
+}
+
+/* MOBILE */
 @media(max-width:768px){
-  .merch-section h1 { font-size:38px; }
+  .product-card{
+    flex-direction:column;
+    text-align:center;
+  }
+  .product-details{
+    text-align:center;
+  }
 }
 </style>
 </head>
@@ -122,45 +161,41 @@ nav {
     <a href="index.html">Home</a>
     <a href="mission.html">Mission</a>
     <a href="index.html#events">Events</a>
-    <a href="merch.html" class="active">Merch</a>
+    <a href="merch.html" class="active">Shop</a>
     <a href="contact.html">Contact</a>
   </div>
 </nav>
 
-<section class="merch-section">
+<section class="shop-section">
+  <h1>Wear the Movement</h1>
+  <p class="subtitle">Support the mission. Represent strength.</p>
 
-  <h1>Stand With the Movement</h1>
-  <div class="merch-sub">
-    Wear the mission. Represent strength.
-  </div>
+  <div class="product-card">
 
-  <div class="product-box">
-
-    <!-- If you upload a shirt image, name it shirt.png -->
-    <img src="shirt.png" alt="Win the Day Shirt">
-
-    <div class="price">
-      WIN THE DAY Logo Tee — $25
+    <div class="product-image">
+      <img src="shirt.png" alt="Win the Day Shirt">
     </div>
 
-    <div class="purpose">
-      100% of proceeds support men’s mental health initiatives and community events.
-    </div>
+    <div class="product-details">
+      <h2>WIN THE DAY Logo Tee</h2>
+      <div class="price">$25</div>
 
-    <a href="https://forms.gle/SNeyLwd5mwSF43U99" target="_blank" class="button secondary">
-      Step 1: Fill Out Order Form
-    </a>
+      <a href="https://forms.gle/SNeyLwd5mwSF43U99" target="_blank" class="button secondary">
+        Step 1: Fill Out Order Form
+      </a>
 
-    <a href="https://buy.stripe.com/6oUaEZc4n1AYaqk5Klfw400" target="_blank" class="button">
-      Step 2: Complete Payment
-    </a>
+      <br>
 
-    <div class="notice">
-      Orders are processed after BOTH the order form and payment are completed.
+      <a href="https://buy.stripe.com/6oUaEZc4n1AYaqk5Klfw400" target="_blank" class="button">
+        Step 2: Complete Payment
+      </a>
+
+      <div class="notice">
+        Orders are processed after BOTH the order form and payment are completed.
+      </div>
     </div>
 
   </div>
-
 </section>
 
 </body>
