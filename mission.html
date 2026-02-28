@@ -2,25 +2,29 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Our Mission | Win the Day</title>
+<title>Mission | Win the Day</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 <style>
-body {
+html, body {
   margin: 0;
+  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: black;
   color: white;
 }
 
+/* NAV */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  padding: 18px 40px;
   background: black;
+}
+
+.nav-logo img {
+  height: 70px;
 }
 
 .nav-links a {
@@ -32,34 +36,53 @@ nav {
 }
 
 .nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0%;
-  height: 3px;
-  background: #16a34a;
-  transition: width 0.3s ease;
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  height:3px;
+  background:#16a34a;
+  transition:0.3s ease;
 }
 
 .nav-links a:hover::after,
 .nav-links a.active::after {
-  width: 100%;
+  width:100%;
 }
 
+/* MISSION PAGE */
 .mission-page {
   padding: 120px 20px;
   text-align: center;
 }
 
-.social-links {
-  margin-top: 40px;
+.mission-page h1 {
+  font-size: 48px;
+  margin-bottom: 40px;
 }
 
-.social-links a {
+/* STACKED MISSION TEXT */
+.mission-text {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 30px;
+  line-height: 1.7;
+}
+
+.mission-line {
+  margin-bottom: 20px;
+}
+
+.mission-line.highlight {
+  font-size: 36px;
+  font-weight: bold;
   color: #facc15;
-  font-size: 22px;
-  margin: 0 12px;
+}
+
+@media(max-width:768px){
+  .mission-text { font-size: 22px; }
+  .mission-line.highlight { font-size: 26px; }
 }
 </style>
 </head>
@@ -67,27 +90,31 @@ nav {
 <body>
 
 <nav>
-  <div>
-    <a href="index.html"><img src="logo.png" height="60"></a>
+  <div class="nav-logo">
+    <a href="index.html">
+      <img src="logo.png" alt="Win the Day Logo">
+    </a>
   </div>
+
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="mission.html" class="active">Mission</a>
+    <a href="index.html#events">Events</a>
+    <a href="merch.html">Shop</a>
+    <a href="contact.html">Contact</a>
   </div>
 </nav>
 
 <section class="mission-page">
   <h1>Our Mission</h1>
-  <p>
-    Win the Day exists to support men’s mental health by breaking stigma,
-    building resilience, and providing tools, community, and purpose—so men
-    can show up stronger for themselves and those who depend on them.
-  </p>
 
-  <div class="social-links">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-youtube"></i></a>
+  <div class="mission-text">
+    <div class="mission-line">Win the Day exists to support men’s mental health</div>
+    <div class="mission-line">by breaking stigma</div>
+    <div class="mission-line">building resilience</div>
+    <div class="mission-line">and providing tools, community, and purpose</div>
+    <div class="mission-line highlight">so men can show up stronger</div>
+    <div class="mission-line">for themselves and those who depend on them.</div>
   </div>
 
 </section>
