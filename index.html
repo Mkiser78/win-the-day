@@ -158,17 +158,74 @@ h2 {
   color:#facc15;
 }
 
-/* EVENT HEADINGS */
-.events-subheading {
-  margin-top:40px;
-  margin-bottom:20px;
-  font-size:22px;
+/* IMPACT STRIP */
+.impact-strip {
+  background:#0f0f0f;
+  padding:60px 20px;
+  border-bottom:1px solid #1c1c1c;
+}
+
+.impact-grid {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:60px;
+  text-align:center;
+}
+
+.impact-item h3 {
+  font-size:42px;
+  color:#16a34a;
+  margin-bottom:10px;
+}
+
+.impact-item p {
+  font-size:14px;
   letter-spacing:2px;
   text-transform:uppercase;
-  opacity:0.8;
+  opacity:0.7;
+}
+
+/* FEATURED */
+.featured-badge {
+  display:inline-block;
+  background:#16a34a;
+  padding:6px 18px;
+  border-radius:50px;
+  font-size:12px;
+  letter-spacing:1px;
+  margin-bottom:20px;
+}
+
+.feature-box {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:60px;
+  flex-wrap:wrap;
+}
+
+.feature-box img {
+  width:340px;
+  border-radius:16px;
+  box-shadow:0 0 40px rgba(22,163,74,0.3);
+}
+
+.feature-details {
+  max-width:500px;
+  text-align:left;
 }
 
 /* EVENTS */
+.events-subheading {
+  margin-top:50px;
+  margin-bottom:15px;
+  font-size:18px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  opacity:0.7;
+}
+
 .event-card {
   background:#1a1a1a;
   padding:30px;
@@ -186,8 +243,8 @@ h2 {
 }
 
 .event-card.past {
-  opacity:0.55;
-  border-left:4px solid #555;
+  opacity:0.5;
+  border-left:4px solid #444;
 }
 
 /* GET INVOLVED */
@@ -232,19 +289,10 @@ h2 {
   color:#16a34a;
 }
 
-/* FOOTER */
 footer {
   padding:30px 20px;
   text-align:center;
   font-size:14px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  nav { flex-direction:column; padding:20px; }
-  .nav-links { flex-wrap:wrap; justify-content:center; gap:12px 20px; }
-  .title{font-size:38px;}
-  .hero-logo{height:160px;}
 }
 </style>
 </head>
@@ -265,7 +313,6 @@ footer {
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero reveal">
   <div class="hero-content">
     <img src="logo.png" class="hero-logo">
@@ -279,7 +326,23 @@ footer {
   </div>
 </section>
 
-<!-- EVENTS SECTION -->
+<section class="impact-strip reveal">
+  <div class="impact-grid">
+    <div class="impact-item">
+      <h3>1</h3>
+      <p>Meeting</p>
+    </div>
+    <div class="impact-item">
+      <h3>5+</h3>
+      <p>Men Helped</p>
+    </div>
+    <div class="impact-item">
+      <h3>100%</h3>
+      <p>Volunteer Led</p>
+    </div>
+  </div>
+</section>
+
 <section class="section-darker reveal" id="events">
   <h2>Support Groups</h2>
 
