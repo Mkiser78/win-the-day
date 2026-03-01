@@ -66,17 +66,29 @@ nav {
   width:100%;
 }
 
-/* UPGRADED DONATE BUTTON */
+/* REFINED DONATE BUTTON */
 .nav-donate {
-  background:#16a34a;
-  color:white !important;
-  padding:10px 26px;
-  border-radius:50px;
-  font-weight:700;
-  box-shadow:0 0 12px rgba(22,163,74,0.35);
-  transition:all 0.25s ease;
+  background: transparent;
+  color: #16a34a !important;
+  border: 2px solid #16a34a;
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
 }
 
+/* Remove underline animation */
+.nav-donate::after {
+  display: none !important;
+}
+
+.nav-donate:hover {
+  background: #16a34a;
+  color: #000 !important;
+  transform: translateY(-2px);
+}
 /* Remove underline animation */
 .nav-donate::after {
   display:none !important;
