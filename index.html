@@ -28,18 +28,14 @@ h1, h2, h3, .title {
   font-family:'Montserrat', sans-serif;
 }
 
-/* REVEAL ANIMATION */
-.reveal {
-  opacity:1;
-  transform:none;
-}
+.reveal { opacity:1; transform:none; }
+
 /* NAV */
 nav {
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:18px 40px;
-  background:transparent;
 }
 
 .nav-logo img { height:70px; }
@@ -101,7 +97,7 @@ nav {
 .hero-logo { height:190px; margin-bottom:25px; }
 
 .statement {
-  font-size:16px;
+  font-size:14px;
   letter-spacing:4px;
   opacity:0.8;
   font-weight:600;
@@ -114,8 +110,9 @@ nav {
 }
 
 .subtext {
-  font-size:21px;
+  font-size:20px;
   line-height:1.7;
+  opacity:0.9;
 }
 
 .button {
@@ -140,14 +137,20 @@ nav {
 .why-exist {
   background:#111;
   padding:100px 20px;
-  border-bottom:1px solid #1c1c1c;
+}
+
+.why-text {
+  max-width:700px;
+  margin:0 auto;
+  font-size:20px;
+  line-height:1.8;
+  opacity:0.9;
 }
 
 /* IMPACT STRIP */
 .impact-strip {
   background:#0f0f0f;
   padding:60px 20px;
-  border-bottom:1px solid #1c1c1c;
 }
 
 .impact-grid {
@@ -165,7 +168,7 @@ nav {
 }
 
 .impact-item p {
-  font-size:14px;
+  font-size:13px;
   letter-spacing:2px;
   text-transform:uppercase;
   opacity:0.7;
@@ -174,23 +177,21 @@ nav {
 /* NEXT MEETING */
 .next-meeting {
   background:#0f0f0f;
-  padding:40px 20px;
+  padding:50px 20px;
   border-top:4px solid #16a34a;
-  border-bottom:1px solid #1c1c1c;
 }
 
 /* SECTIONS */
 section {
   padding:100px 20px;
   text-align:center;
-  border-bottom:1px solid #1c1c1c;
 }
 
 .section-dark { background:#0f0f0f; }
 .section-darker { background:#111; }
 
 h2 {
-  font-size:40px;
+  font-size:38px;
   margin-bottom:30px;
   color:#facc15;
 }
@@ -277,7 +278,7 @@ h2 {
 /* SOCIAL */
 .social-links {
   text-align:center;
-  margin:40px 0;
+  margin:50px 0;
 }
 
 .social-links a {
@@ -297,6 +298,7 @@ footer {
   padding:30px 20px;
   text-align:center;
   font-size:14px;
+  opacity:0.7;
 }
 
 /* MOBILE */
@@ -314,7 +316,7 @@ footer {
 
 <nav>
   <div class="nav-logo">
-    <a href="index.html"><img src="logo.png"></a>
+    <a href="index.html"><img src="logo.png" alt="Win the Day Logo"></a>
   </div>
   <div class="nav-links">
     <a href="index.html" class="active">Home</a>
@@ -326,9 +328,9 @@ footer {
   </div>
 </nav>
 
-<section class="hero reveal">
+<section class="hero">
   <div class="hero-content">
-    <img src="logo.png" class="hero-logo">
+    <img src="logo.png" class="hero-logo" alt="Win the Day Logo">
     <div class="statement">YOU DON’T HAVE TO CARRY IT ALONE.</div>
     <div class="title">WIN THE DAY</div>
     <div class="subtext">
@@ -339,16 +341,16 @@ footer {
   </div>
 </section>
 
-<section class="why-exist reveal">
+<section class="why-exist">
   <h2>Why We Exist</h2>
   <div class="why-text">
-    To build supportive relationships.<br>
-    To create brotherhood.<br>
+    To build supportive relationships.<br><br>
+    To create brotherhood.<br><br>
     To strengthen the men who strengthen our community.
   </div>
 </section>
 
-<section class="impact-strip reveal">
+<section class="impact-strip">
   <div class="impact-grid">
     <div class="impact-item">
       <h3>1</h3>
@@ -364,28 +366,26 @@ footer {
     </div>
     <div class="impact-item">
       <h3>KY</h3>
-      <p>Based in Eastern Kentucky</p>
+      <p>Eastern Kentucky</p>
     </div>
   </div>
 </section>
 
-<section class="next-meeting reveal">
+<section class="next-meeting">
   <h2>Next Support Group</h2>
   <p>March 28 • 11AM – 2PM • Rowan County Public Library</p>
-  <div class="meeting-subline">
-    Free • Confidential • No Registration Required
-  </div>
+  <p>Free • Confidential • No Registration Required</p>
 </section>
 
-<section class="section-dark reveal">
+<section class="section-dark">
   <h2>“What we're doing may save a life.”</h2>
 </section>
 
-<section class="section-darker reveal">
+<section class="section-darker">
   <div class="featured-badge">FEATURED EVENT</div>
   <h2>Rock Your Mental</h2>
   <div class="feature-box">
-    <img src="Rock your mental.png">
+    <img src="rock-your-mental.png" alt="Rock Your Mental Event">
     <div class="feature-details">
       <p><strong>June 13 | 4PM – 10PM</strong></p>
       <p>Carl D. Perkins Center, Morehead, KY</p>
@@ -394,7 +394,7 @@ footer {
   </div>
 </section>
 
-<section class="section-dark reveal">
+<section class="section-dark">
   <h2>First Time Coming?</h2>
   <div class="first-time-box">
     You don’t have to talk.<br>
@@ -405,7 +405,7 @@ footer {
   </div>
 </section>
 
-<section class="section-darker reveal" id="events">
+<section class="section-darker" id="events">
   <h2>Support Groups</h2>
 
   <div class="event-card">
@@ -424,7 +424,7 @@ footer {
   </div>
 </section>
 
-<section class="section-dark reveal" id="get-involved">
+<section class="section-dark" id="get-involved">
   <h2>Get Involved</h2>
 
   <div class="involved-grid">
@@ -448,7 +448,7 @@ footer {
   </div>
 </section>
 
-<div class="social-links reveal">
+<div class="social-links">
   <a href="https://www.facebook.com/profile.php?id=61588261523468" target="_blank"><i class="fab fa-facebook-f"></i></a>
   <a href="https://www.instagram.com/wintheday5230/" target="_blank"><i class="fab fa-instagram"></i></a>
 </div>
@@ -456,8 +456,6 @@ footer {
 <footer>
   © 2026 Win the Day | Strength • Belonging • Action
 </footer>
-
-
 
 </body>
 </html>
