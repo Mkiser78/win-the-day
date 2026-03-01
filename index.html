@@ -28,6 +28,17 @@ h1, h2, h3, .title {
   font-family:'Montserrat', sans-serif;
 }
 
+/* REVEAL ANIMATION */
+.reveal {
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.8s ease;
+}
+.reveal.active {
+  opacity:1;
+  transform:translateY(0);
+}
+
 /* NAV */
 nav {
   display:flex;
@@ -106,7 +117,6 @@ nav {
   font-size:64px;
   font-weight:900;
   margin:15px 0;
-  letter-spacing:1px;
 }
 
 .subtext {
@@ -128,11 +138,11 @@ nav {
 }
 
 .button:hover {
-  transform:translateY(-3px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.6);
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(22,163,74,0.4);
 }
 
-/* WHY WE EXIST */
+/* WHY */
 .why-exist {
   background:#111;
   padding:100px 20px;
@@ -140,46 +150,12 @@ nav {
   border-bottom:1px solid #1c1c1c;
 }
 
-.why-exist h2 {
-  font-size:38px;
-  margin-bottom:40px;
-  color:#facc15;
-}
-
-.why-text {
-  max-width:700px;
-  margin:0 auto;
-  font-size:24px;
-  line-height:2;
-  font-weight:500;
-}
-
 /* NEXT MEETING */
 .next-meeting {
   background:#0f0f0f;
   padding:40px 20px;
-  text-align:center;
   border-top:4px solid #16a34a;
   border-bottom:1px solid #1c1c1c;
-}
-
-.next-meeting h2 {
-  font-size:22px;
-  margin-bottom:8px;
-  letter-spacing:1px;
-}
-
-.next-meeting p {
-  font-size:18px;
-  font-weight:500;
-  opacity:0.9;
-}
-
-.meeting-subline {
-  margin-top:10px;
-  font-size:14px;
-  letter-spacing:1px;
-  opacity:0.7;
 }
 
 /* SECTIONS */
@@ -198,14 +174,17 @@ h2 {
   color:#facc15;
 }
 
-.section-dark h2 {
-  font-size:36px;
-  font-weight:700;
-  max-width:700px;
-  margin:0 auto;
+/* FEATURED UPGRADE */
+.featured-badge {
+  display:inline-block;
+  background:#16a34a;
+  padding:6px 18px;
+  border-radius:50px;
+  font-size:12px;
+  letter-spacing:1px;
+  margin-bottom:20px;
 }
 
-/* FEATURED */
 .feature-box {
   display:flex;
   justify-content:center;
@@ -215,8 +194,9 @@ h2 {
 }
 
 .feature-box img {
-  width:320px;
-  border-radius:14px;
+  width:340px;
+  border-radius:16px;
+  box-shadow:0 0 40px rgba(22,163,74,0.3);
 }
 
 .feature-details {
@@ -232,12 +212,6 @@ h2 {
   line-height:1.9;
 }
 
-.first-time-close {
-  margin-top:40px;
-  font-size:20px;
-  opacity:0.85;
-}
-
 /* EVENTS */
 .event-card {
   background:#1a1a1a;
@@ -247,6 +221,12 @@ h2 {
   border-radius:10px;
   border-left:4px solid #16a34a;
   text-align:left;
+  transition:0.3s ease;
+}
+
+.event-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.5);
 }
 
 /* GET INVOLVED */
@@ -255,7 +235,6 @@ h2 {
   flex-wrap:wrap;
   justify-content:center;
   gap:30px;
-  margin-top:40px;
 }
 
 .involved-card {
@@ -264,6 +243,12 @@ h2 {
   max-width:320px;
   border-radius:10px;
   text-align:left;
+  transition:0.3s ease;
+}
+
+.involved-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.5);
 }
 
 .involved-card h3 { color:#facc15; }
@@ -278,23 +263,18 @@ h2 {
   color:#facc15;
   font-size:32px;
   margin:0 18px;
+  transition:0.3s;
 }
 
-/* FOOTER */
-footer {
-  background:transparent;
-  padding:30px 20px;
-  text-align:center;
-  font-size:14px;
-  line-height:1.6;
+.social-links a:hover {
+  transform:scale(1.2);
+  color:#16a34a;
 }
 
 /* MOBILE */
 @media(max-width:768px){
   nav { flex-direction:column; padding:20px; }
-  .nav-logo { margin-bottom:15px; }
   .nav-links { flex-wrap:wrap; justify-content:center; gap:12px 20px; }
-  .nav-links a { margin:0; font-size:16px; }
   .title{font-size:38px;}
   .hero-logo{height:160px;}
   .feature-box{flex-direction:column;}
@@ -318,7 +298,7 @@ footer {
   </div>
 </nav>
 
-<section class="hero">
+<section class="hero reveal">
   <div class="hero-content">
     <img src="logo.png" class="hero-logo">
     <div class="statement">YOU DON’T HAVE TO CARRY IT ALONE.</div>
@@ -331,7 +311,7 @@ footer {
   </div>
 </section>
 
-<section class="why-exist">
+<section class="why-exist reveal">
   <h2>Why We Exist</h2>
   <div class="why-text">
     To build supportive relationships.<br>
@@ -340,7 +320,7 @@ footer {
   </div>
 </section>
 
-<section class="next-meeting">
+<section class="next-meeting reveal">
   <h2>Next Support Group</h2>
   <p>March 28 • 11AM – 2PM • Rowan County Public Library</p>
   <div class="meeting-subline">
@@ -348,16 +328,16 @@ footer {
   </div>
 </section>
 
-<section class="section-dark">
+<section class="section-dark reveal">
   <h2>“What we're doing may save a life.”</h2>
 </section>
 
-<section class="section-darker">
-  <h2>Featured Event</h2>
+<section class="section-darker reveal">
+  <div class="featured-badge">FEATURED EVENT</div>
+  <h2>Rock Your Mental</h2>
   <div class="feature-box">
     <img src="Rock your mental.png">
     <div class="feature-details">
-      <h3>Rock Your Mental</h3>
       <p><strong>June 13 | 4PM – 10PM</strong></p>
       <p>Carl D. Perkins Center, Morehead, KY</p>
       <p>Live music. Real conversations. Community that builds strength.</p>
@@ -365,7 +345,7 @@ footer {
   </div>
 </section>
 
-<section class="section-dark">
+<section class="section-dark reveal">
   <h2>First Time Coming?</h2>
   <div class="first-time-box">
     You don’t have to talk.<br>
@@ -374,12 +354,9 @@ footer {
     It’s confidential.<br>
     You can just show up and listen.
   </div>
-  <div class="first-time-close">
-    The hardest part is walking in. We’ll take it from there.
-  </div>
 </section>
 
-<section class="section-darker" id="events">
+<section class="section-darker reveal" id="events">
   <h2>Support Groups</h2>
 
   <div class="event-card">
@@ -398,7 +375,7 @@ footer {
   </div>
 </section>
 
-<section class="section-dark" id="get-involved">
+<section class="section-dark reveal" id="get-involved">
   <h2>Get Involved</h2>
 
   <div class="involved-grid">
@@ -422,7 +399,7 @@ footer {
   </div>
 </section>
 
-<div class="social-links">
+<div class="social-links reveal">
   <a href="https://www.facebook.com/profile.php?id=61588261523468" target="_blank"><i class="fab fa-facebook-f"></i></a>
   <a href="https://www.instagram.com/wintheday5230/" target="_blank"><i class="fab fa-instagram"></i></a>
 </div>
@@ -431,6 +408,19 @@ footer {
   © 2026 Win the Day | Strength • Belonging • Action<br>
   Based in Eastern Kentucky
 </footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+window.addEventListener('scroll', () => {
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) {
+      el.classList.add('active');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
