@@ -24,9 +24,9 @@ html, body {
   scroll-behavior:smooth;
 }
 
-/* Smooth page fade-in */
+/* Smooth page fade */
 body {
-  animation: fadeIn 0.6s ease-out;
+  animation: fadeIn 0.5s ease-out;
 }
 
 @keyframes fadeIn {
@@ -78,7 +78,7 @@ nav {
   width:100%;
 }
 
-/* HERO WITH PARALLAX */
+/* HERO PARALLAX */
 .hero {
   position:relative;
   height:90vh;
@@ -141,11 +141,20 @@ nav {
   box-shadow:0 15px 35px rgba(22,163,74,0.4);
 }
 
-/* WHY */
-.why-exist {
-  background:#111;
+/* SECTIONS */
+section {
   padding:100px 20px;
+  text-align:center;
   border-bottom:1px solid #1c1c1c;
+}
+
+.section-dark { background:#0f0f0f; }
+.section-darker { background:#111; }
+
+h2 {
+  font-size:40px;
+  margin-bottom:30px;
+  color:#facc15;
 }
 
 /* IMPACT STRIP */
@@ -174,68 +183,6 @@ nav {
   letter-spacing:2px;
   text-transform:uppercase;
   opacity:0.7;
-}
-
-/* NEXT MEETING */
-.next-meeting {
-  background:#0f0f0f;
-  padding:40px 20px;
-  border-top:4px solid #16a34a;
-  border-bottom:1px solid #1c1c1c;
-}
-
-/* SECTIONS */
-section {
-  padding:100px 20px;
-  text-align:center;
-  border-bottom:1px solid #1c1c1c;
-}
-
-.section-dark { background:#0f0f0f; }
-.section-darker { background:#111; }
-
-h2 {
-  font-size:40px;
-  margin-bottom:30px;
-  color:#facc15;
-}
-
-/* FEATURED */
-.featured-badge {
-  display:inline-block;
-  background:#16a34a;
-  padding:6px 18px;
-  border-radius:50px;
-  font-size:12px;
-  letter-spacing:1px;
-  margin-bottom:20px;
-}
-
-.feature-box {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:60px;
-  flex-wrap:wrap;
-}
-
-.feature-box img {
-  width:340px;
-  border-radius:16px;
-  box-shadow:0 0 40px rgba(22,163,74,0.3);
-}
-
-.feature-details {
-  max-width:500px;
-  text-align:left;
-}
-
-/* FIRST TIME */
-.first-time-box {
-  max-width:700px;
-  margin:0 auto;
-  font-size:22px;
-  line-height:1.9;
 }
 
 /* EVENTS */
@@ -304,7 +251,7 @@ footer {
   font-size:14px;
 }
 
-/* MOBILE FIX (disable parallax on mobile) */
+/* MOBILE */
 @media(max-width:768px){
   nav { flex-direction:column; padding:20px; }
   .nav-links { flex-wrap:wrap; justify-content:center; gap:12px 20px; }
@@ -345,9 +292,7 @@ footer {
   </div>
 </section>
 
-<!-- Everything below remains unchanged -->
-
-<!-- (All your other sections remain exactly the same here) -->
+<!-- Keep all your existing sections below exactly as they were -->
 
 </body>
 </html>
