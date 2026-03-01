@@ -28,7 +28,7 @@ h1, h2, h3, .title {
   font-family:'Montserrat', sans-serif;
 }
 
-/* REVEAL */
+/* REVEAL ANIMATION */
 .reveal {
   opacity:0;
   transform:translateY(40px);
@@ -158,74 +158,17 @@ h2 {
   color:#facc15;
 }
 
-/* IMPACT STRIP */
-.impact-strip {
-  background:#0f0f0f;
-  padding:60px 20px;
-  border-bottom:1px solid #1c1c1c;
-}
-
-.impact-grid {
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:60px;
-  text-align:center;
-}
-
-.impact-item h3 {
-  font-size:42px;
-  color:#16a34a;
-  margin-bottom:10px;
-}
-
-.impact-item p {
-  font-size:14px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  opacity:0.7;
-}
-
-/* FEATURED */
-.featured-badge {
-  display:inline-block;
-  background:#16a34a;
-  padding:6px 18px;
-  border-radius:50px;
-  font-size:12px;
-  letter-spacing:1px;
-  margin-bottom:20px;
-}
-
-.feature-box {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:60px;
-  flex-wrap:wrap;
-}
-
-.feature-box img {
-  width:340px;
-  border-radius:16px;
-  box-shadow:0 0 40px rgba(22,163,74,0.3);
-}
-
-.feature-details {
-  max-width:500px;
-  text-align:left;
-}
-
-/* EVENTS */
+/* EVENT HEADERS */
 .events-subheading {
-  margin-top:50px;
-  margin-bottom:15px;
+  margin-top:40px;
+  margin-bottom:10px;
   font-size:18px;
   letter-spacing:2px;
   text-transform:uppercase;
   opacity:0.7;
 }
 
+/* EVENTS */
 .event-card {
   background:#1a1a1a;
   padding:30px;
@@ -243,7 +186,7 @@ h2 {
 }
 
 .event-card.past {
-  opacity:0.5;
+  opacity:0.45;
   border-left:4px solid #444;
 }
 
@@ -289,10 +232,13 @@ h2 {
   color:#16a34a;
 }
 
-footer {
-  padding:30px 20px;
-  text-align:center;
-  font-size:14px;
+/* MOBILE */
+@media(max-width:768px){
+  nav { flex-direction:column; padding:20px; }
+  .nav-links { flex-wrap:wrap; justify-content:center; gap:12px 20px; }
+  .title{font-size:38px;}
+  .hero-logo{height:160px;}
+  .feature-box{flex-direction:column;}
 }
 </style>
 </head>
@@ -326,20 +272,48 @@ footer {
   </div>
 </section>
 
-<section class="impact-strip reveal">
-  <div class="impact-grid">
-    <div class="impact-item">
-      <h3>1</h3>
-      <p>Meeting</p>
+<section class="why-exist reveal">
+  <h2>Why We Exist</h2>
+  <div class="why-text">
+    To build supportive relationships.<br>
+    To create brotherhood.<br>
+    To strengthen the men who strengthen our community.
+  </div>
+</section>
+
+<section class="next-meeting reveal">
+  <h2>Next Support Group</h2>
+  <p>March 28 • 11AM – 2PM • Rowan County Public Library</p>
+  <div class="meeting-subline">
+    Free • Confidential • No Registration Required
+  </div>
+</section>
+
+<section class="section-dark reveal">
+  <h2>“What we're doing may save a life.”</h2>
+</section>
+
+<section class="section-darker reveal">
+  <div class="featured-badge">FEATURED EVENT</div>
+  <h2>Rock Your Mental</h2>
+  <div class="feature-box">
+    <img src="Rock your mental.png">
+    <div class="feature-details">
+      <p><strong>June 13 | 4PM – 10PM</strong></p>
+      <p>Carl D. Perkins Center, Morehead, KY</p>
+      <p>Live music. Real conversations. Community that builds strength.</p>
     </div>
-    <div class="impact-item">
-      <h3>5+</h3>
-      <p>Men Helped</p>
-    </div>
-    <div class="impact-item">
-      <h3>100%</h3>
-      <p>Volunteer Led</p>
-    </div>
+  </div>
+</section>
+
+<section class="section-dark reveal">
+  <h2>First Time Coming?</h2>
+  <div class="first-time-box">
+    You don’t have to talk.<br>
+    You won’t be judged.<br>
+    No one is forced to share.<br>
+    It’s confidential.<br>
+    You can just show up and listen.
   </div>
 </section>
 
@@ -367,8 +341,38 @@ footer {
 
 </section>
 
+<section class="section-dark reveal" id="get-involved">
+  <h2>Get Involved</h2>
+
+  <div class="involved-grid">
+    <div class="involved-card">
+      <h3>Attend</h3>
+      <p>Show up. Speak up. Grow stronger together.</p>
+      <a href="mailto:mitchkiser@wintheday.site" class="button">Attend</a>
+    </div>
+
+    <div class="involved-card">
+      <h3>Volunteer</h3>
+      <p>Help build something that changes lives.</p>
+      <a href="mailto:mitchkiser@wintheday.site" class="button">Volunteer</a>
+    </div>
+
+    <div class="involved-card">
+      <h3>Partner</h3>
+      <p>Back a movement that builds strength in men.</p>
+      <a href="mailto:mitchkiser@wintheday.site" class="button">Partner</a>
+    </div>
+  </div>
+</section>
+
+<div class="social-links reveal">
+  <a href="https://www.facebook.com/profile.php?id=61588261523468" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/wintheday5230/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+
 <footer>
-  © 2026 Win the Day | Strength • Belonging • Action
+  © 2026 Win the Day | Strength • Belonging • Action<br>
+  Based in Eastern Kentucky
 </footer>
 
 <script>
