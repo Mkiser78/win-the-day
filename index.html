@@ -146,8 +146,35 @@ nav {
 .why-exist {
   background:#111;
   padding:100px 20px;
-  text-align:center;
   border-bottom:1px solid #1c1c1c;
+}
+
+/* IMPACT STRIP */
+.impact-strip {
+  background:#0f0f0f;
+  padding:60px 20px;
+  border-bottom:1px solid #1c1c1c;
+}
+
+.impact-grid {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:60px;
+  text-align:center;
+}
+
+.impact-item h3 {
+  font-size:42px;
+  color:#16a34a;
+  margin-bottom:10px;
+}
+
+.impact-item p {
+  font-size:14px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  opacity:0.7;
 }
 
 /* NEXT MEETING */
@@ -174,7 +201,7 @@ h2 {
   color:#facc15;
 }
 
-/* FEATURED UPGRADE */
+/* FEATURED */
 .featured-badge {
   display:inline-block;
   background:#16a34a;
@@ -271,6 +298,13 @@ h2 {
   color:#16a34a;
 }
 
+/* FOOTER */
+footer {
+  padding:30px 20px;
+  text-align:center;
+  font-size:14px;
+}
+
 /* MOBILE */
 @media(max-width:768px){
   nav { flex-direction:column; padding:20px; }
@@ -317,6 +351,27 @@ h2 {
     To build supportive relationships.<br>
     To create brotherhood.<br>
     To strengthen the men who strengthen our community.
+  </div>
+</section>
+
+<section class="impact-strip reveal">
+  <div class="impact-grid">
+    <div class="impact-item">
+      <h3>1</h3>
+      <p>Meeting</p>
+    </div>
+    <div class="impact-item">
+      <h3>5+</h3>
+      <p>Men Helped</p>
+    </div>
+    <div class="impact-item">
+      <h3>100%</h3>
+      <p>Volunteer Led</p>
+    </div>
+    <div class="impact-item">
+      <h3>KY</h3>
+      <p>Based in Eastern Kentucky</p>
+    </div>
   </div>
 </section>
 
@@ -405,8 +460,7 @@ h2 {
 </div>
 
 <footer>
-  © 2026 Win the Day | Strength • Belonging • Action<br>
-  Based in Eastern Kentucky
+  © 2026 Win the Day | Strength • Belonging • Action
 </footer>
 
 <script>
