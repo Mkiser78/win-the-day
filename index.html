@@ -24,7 +24,9 @@ html, body {
   scroll-behavior:smooth;
 }
 
-h1, h2, h3, .title { font-family:'Montserrat', sans-serif; }
+h1, h2, h3, .title {
+  font-family:'Montserrat', sans-serif;
+}
 
 nav {
   display:flex;
@@ -35,7 +37,10 @@ nav {
 
 .nav-logo img { height:70px; }
 
-.nav-links { display:flex; align-items:center; }
+.nav-links {
+  display:flex;
+  align-items:center;
+}
 
 .nav-links a {
   position:relative;
@@ -57,18 +62,9 @@ nav {
 }
 
 .nav-links a:hover::after,
-.nav-links a.active::after { width:100%; }
-
-.nav-donate {
-  background:#16a34a;
-  color:white !important;
-  padding:8px 22px;
-  border-radius:50px;
-  margin-left:30px;
-  transition:0.3s ease;
+.nav-links a.active::after {
+  width:100%;
 }
-
-.nav-donate:hover { background:#15803d; }
 
 .hero {
   position:relative;
@@ -181,7 +177,47 @@ section {
 .section-dark { background:#0f0f0f; }
 .section-darker { background:#111; }
 
-h2 { font-size:40px; margin-bottom:30px; color:#facc15; }
+h2 {
+  font-size:40px;
+  margin-bottom:30px;
+  color:#facc15;
+}
+
+.featured-badge {
+  display:inline-block;
+  background:#16a34a;
+  padding:6px 18px;
+  border-radius:50px;
+  font-size:12px;
+  letter-spacing:1px;
+  margin-bottom:20px;
+}
+
+.feature-box {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:60px;
+  flex-wrap:wrap;
+}
+
+.feature-box img {
+  width:340px;
+  border-radius:16px;
+  box-shadow:0 0 40px rgba(22,163,74,0.3);
+}
+
+.feature-details {
+  max-width:500px;
+  text-align:left;
+}
+
+.first-time-box {
+  max-width:700px;
+  margin:0 auto;
+  font-size:22px;
+  line-height:1.9;
+}
 
 .event-card {
   background:#1a1a1a;
@@ -250,6 +286,7 @@ footer {
   .nav-links { flex-wrap:wrap; justify-content:center; gap:12px 20px; }
   .title{font-size:38px;}
   .hero-logo{height:160px;}
+  .feature-box{flex-direction:column;}
 }
 </style>
 </head>
@@ -267,34 +304,101 @@ footer {
     <a href="#get-involved">Get Involved</a>
     <a href="merch.html">Shop</a>
     <a href="contact.html">Contact</a>
-    <a href="#support" class="nav-donate">Donate</a>
   </div>
 </nav>
 
-<!-- ORIGINAL CONTENT ABOVE UNCHANGED -->
-
-<section class="section-darker" id="support">
-  <h2>Support the Mission</h2>
-  <p style="max-width:700px;margin:0 auto;">
-    Every dollar strengthens men in our community.
-    100% goes toward building brotherhood and mental health support.
-  </p>
-
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:25px;margin-top:40px;">
-    <a href="https://buy.stripe.com/fZu5kF6K3cfCdCw6Opfw402" target="_blank" class="button">$10 — Brotherhood Supporter</a>
-    <a href="https://buy.stripe.com/aFaaEZgkD3J6buo4Ghfw401" target="_blank" class="button">$25 — Meeting Sponsor</a>
-    <a href="https://buy.stripe.com/fZu8wRgkDfrOcysfkVfw403" target="_blank" class="button">$50 — Strength Builder</a>
-    <a href="https://buy.stripe.com/6oU14p4BV0wU560dcNfw404" target="_blank" class="button">$100 — Community Champion</a>
-  </div>
-
-  <div style="margin-top:60px;">
-    <h3 style="color:#facc15;">Become a Monthly Brotherhood Supporter</h3>
-    <p>Consistent monthly support allows us to expand meetings and impact.</p>
-    <a href="https://buy.stripe.com/fZu8wRgkDfrOcysfkVfw403" target="_blank" class="button">Become a Monthly Supporter</a>
+<section class="hero">
+  <div class="hero-content">
+    <img src="logo.png" class="hero-logo">
+    <div class="statement">YOU DON’T HAVE TO CARRY IT ALONE.</div>
+    <div class="title">WIN THE DAY</div>
+    <div class="subtext">
+      Real conversations. Real strength.
+      A room full of men choosing to grow.
+    </div>
+    <a href="#events" class="button">Find Your Seat</a>
   </div>
 </section>
 
-<!-- EVERYTHING BELOW REMAINS EXACTLY AS YOUR ORIGINAL FILE -->
+<section class="why-exist">
+  <h2>Why We Exist</h2>
+  <div class="why-text">
+    To build supportive relationships.<br>
+    To create brotherhood.<br>
+    To strengthen the men who strengthen our community.
+  </div>
+</section>
+
+<section class="impact-strip">
+  <div class="impact-grid">
+    <div class="impact-item">
+      <h3>1</h3>
+      <p>Meeting</p>
+    </div>
+    <div class="impact-item">
+      <h3>5+</h3>
+      <p>Men Helped</p>
+    </div>
+    <div class="impact-item">
+      <h3>100%</h3>
+      <p>Volunteer Led</p>
+    </div>
+    <div class="impact-item">
+      <h3>KY</h3>
+      <p>Based in Eastern Kentucky</p>
+    </div>
+  </div>
+</section>
+
+<section class="next-meeting">
+  <h2>Next Support Group</h2>
+  <p id="nextMeeting"></p>
+  <div class="meeting-subline">
+    Free • Confidential • No Registration Required
+  </div>
+</section>
+
+<section class="section-dark">
+  <h2>“What we're doing may save a life.”</h2>
+</section>
+
+<section class="section-darker" id="events">
+  <h2>Support Groups</h2>
+  <div id="meetingList"></div>
+</section>
+
+<section class="section-dark" id="get-involved">
+  <h2>Get Involved</h2>
+
+  <div class="involved-grid">
+    <div class="involved-card">
+      <h3>Attend</h3>
+      <p>Show up. Speak up. Grow stronger together.</p>
+      <a href="mailto:mitchkiser@wintheday.site" class="button">Attend</a>
+    </div>
+
+    <div class="involved-card">
+      <h3>Volunteer</h3>
+      <p>Help build something that changes lives.</p>
+      <a href="mailto:mitchkiser@wintheday.site" class="button">Volunteer</a>
+    </div>
+
+    <div class="involved-card">
+      <h3>Partner</h3>
+      <p>Back a movement that builds strength in men.</p>
+      <a href="mailto:mitchkiser@wintheday.site" class="button">Partner</a>
+    </div>
+  </div>
+</section>
+
+<div class="social-links">
+  <a href="https://www.facebook.com/profile.php?id=61588261523468" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/wintheday5230/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+
+<footer>
+  © 2026 Win the Day | Strength • Belonging • Action
+</footer>
 
 <script>
 function getLastSaturday(year, month) {
@@ -315,28 +419,36 @@ function generateMeetings() {
   const today = new Date();
   let year = today.getFullYear();
   let month = today.getMonth();
+
   const meetingList = document.getElementById("meetingList");
   meetingList.innerHTML = "";
+
   let nextMeetingSet = false;
   let count = 0;
 
   while (count < 3) {
     let meetingDate = getLastSaturday(year, month);
+
     if (meetingDate >= today) {
+
       if (!nextMeetingSet) {
         document.getElementById("nextMeeting").innerHTML =
           formatDate(meetingDate) + " • 11AM – 2PM • Rowan County Public Library";
         nextMeetingSet = true;
       }
+
       const card = document.createElement("div");
       card.className = "event-card";
+
       card.innerHTML = `
         <h3>${formatDate(meetingDate)}</h3>
         <p>Rowan County Public Library | 11AM – 2PM</p>
       `;
+
       meetingList.appendChild(card);
       count++;
     }
+
     month++;
     if (month > 11) {
       month = 0;
