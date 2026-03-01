@@ -373,10 +373,9 @@ footer {
 
 <section class="next-meeting">
   <h2>Next Support Group</h2>
-  <p>March 28 • 11AM – 2PM • Rowan County Public Library</p>
+  <p id="nextMeeting"></p>
   <p>Free • Confidential • No Registration Required</p>
 </section>
-
 <section class="section-dark">
   <h2>“What we're doing may save a life.”</h2>
 </section>
@@ -456,6 +455,40 @@ footer {
 <footer>
   © 2026 Win the Day | Strength • Belonging • Action
 </footer>
+<script>
+function getLastSaturday(year, month) {
+  const lastDay = new Date(year, month + 1, 0);
+  const day = lastDay.getDay();
+  const diff = day >= 6 ? day - 6 : day + 1;
+  return new Date(year, month + 1, 0 - diff);
+}
 
-</body>
+function formatDate(date) {
+  const options = { month: 'long', day: 'numeric' };
+  return date.toLocaleDateString('en-US', options);
+}
+
+function updateNextMeeting() {
+  const today = new Date();
+  let year = today.getFullYear();
+  let month = today.getMonth();
+
+  let meetingDate = getLastSaturday(year, month);
+
+  if (today > meetingDate) {
+    month++;
+    if (month > 11) {
+      month = 0;
+      year++;
+    }
+    meetingDate = getLastSaturday(year, month);
+  }
+
+  const formatted = formatDate(meetingDate);
+  document.getElementById("nextMeeting").innerHTML =
+    formatted + " • 11AM – 2PM • Rowan County Public Library";
+}
+
+updateNextMeeting();
+</script></body>
 </html>
