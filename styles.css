@@ -1,15 +1,14 @@
 /* ================= ROOT ================= */
 
 :root{
-  --bg-main:#f4f1ea;
-  --bg-soft:#ffffff;
-  --bg-darker:#ece7dd;
-  --accent:#c89b3c;
+  --bg-main:#f4f1ea;          /* warm light background */
+  --bg-soft:#ffffff;          /* clean section background */
+  --bg-darker:#ece7dd;        /* subtle section contrast */
+  --accent:#c89b3c;           /* strong gold */
   --accent-soft:#e7c16f;
   --text-main:#1f1f1f;
   --text-muted:#5c5c5c;
 }
-
 /* ================= GLOBAL ================= */
 
 html,body{
@@ -51,7 +50,7 @@ nav{
   justify-content:space-between;
   align-items:center;
   padding:20px 60px;
-  background:rgba(24,24,24,0.95);
+  background:rgba(24,24,24,0.9);
   backdrop-filter:blur(10px);
   position:sticky;
   top:0;
@@ -75,7 +74,7 @@ nav{
 
 .nav-links a{
   position:relative;
-  color:#cfcfcf;
+  color:var(--text-muted);
   margin-left:30px;
   text-decoration:none;
   font-size:14px;
@@ -97,7 +96,7 @@ nav{
 }
 
 .nav-links a:hover{
-  color:#ffffff;
+  color:#fff;
 }
 
 .nav-links a:hover::after{
@@ -117,22 +116,172 @@ nav{
   color:#111!important;
 }
 
-/* ================= HAMBURGER ================= */
+/* ================= HERO ================= */
 
-.hamburger{
-  display:none;
-  flex-direction:column;
-  gap:5px;
-  cursor:pointer;
-  z-index:1100;
+.hero{
+  position:relative;
+  height:90vh;
+  background:url("hero.jpg") center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 }
 
-.hamburger span{
-  width:26px;
-  height:3px;
-  background:#ffffff;
-  border-radius:2px;
-  transition:all .3s ease;
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55));
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:820px;
+}
+
+.hero-logo{
+  height:170px;
+  margin-bottom:25px;
+}
+
+.statement{
+  font-size:13px;
+  letter-spacing:5px;
+  color:#eaeaea;
+}
+.title{
+  font-size:62px;
+  font-weight:800;
+  margin:18px 0;
+  color:#ffffff;
+  text-shadow:0 4px 25px rgba(0,0,0,.6);
+}
+.subtext{
+  font-size:20px;
+  margin-top:10px;
+  color:#f5f5f5;
+  text-shadow:0 2px 15px rgba(0,0,0,.6);
+}
+/* ================= BUTTONS ================= */
+
+.button{
+  display:inline-block;
+  margin-top:35px;
+  padding:16px 48px;
+  background:var(--accent);
+  color:#111;
+  border-radius:40px;
+  font-weight:600;
+  text-decoration:none;
+  transition:.3s ease;
+}
+
+.button:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 35px rgba(0,0,0,.4);
+}
+
+/* ================= CARDS ================= */
+
+.section-dark{background:var(--bg-soft);}
+.section-darker{background:var(--bg-darker);}
+
+.event-card,
+.involved-card{
+  background:var(--bg-soft);
+  padding:38px;
+  margin:28px auto;
+  max-width:720px;
+  border-radius:18px;
+  text-align:left;
+  transition:.3s ease;
+}
+
+.event-card:hover,
+.involved-card:hover{
+  transform:translateY(-6px);
+}
+
+/* ================= IMPACT ================= */
+
+.impact-strip{
+  background:#1c1c1c;
+  padding:80px 20px;
+}
+
+.impact-grid{
+  display:flex;
+  justify-content:center;
+  gap:60px;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+
+.impact-item h3{
+  font-size:46px;
+  color:var(--accent);
+}
+
+.impact-item p{
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* ================= FEATURED ================= */
+
+.feature-box{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:60px;
+  flex-wrap:wrap;
+}
+
+.feature-box img{
+  width:360px;
+  border-radius:18px;
+}
+
+/* ================= INVOLVED ================= */
+
+.involved-grid{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:30px;
+}
+
+/* ================= SOCIAL ================= */
+
+.social-links{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin:60px 0 20px;
+}
+
+.social-links a{
+  font-size:28px;
+  color:var(--text-muted);
+  transition:.3s ease;
+}
+
+.social-links a:hover{
+  color:var(--accent);
+  transform:translateY(-4px);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  padding:40px 20px;
+  text-align:center;
+  font-size:13px;
+  letter-spacing:2px;
+  background:#111;
+  color:#777;
 }
 
 /* ================= MOBILE ================= */
@@ -140,54 +289,122 @@ nav{
 @media(max-width:768px){
 
   nav{
-    padding:18px 20px;
-  }
-
-  .nav-logo img{
-    height:60px;
-    transform:translateY(-2px);
-  }
-
-  .hamburger{
-    display:flex;
-    position:absolute;
-    right:20px;
-    top:26px;
-  }
-
-  .hamburger.active span:nth-child(1){
-    transform:rotate(45deg) translate(5px,5px);
-  }
-
-  .hamburger.active span:nth-child(2){
-    opacity:0;
-  }
-
-  .hamburger.active span:nth-child(3){
-    transform:rotate(-45deg) translate(6px,-6px);
+    flex-direction:column;
+    padding:20px;
   }
 
   .nav-links{
-    position:absolute;
-    top:75px;
-    left:0;
-    width:100%;
-    background:#ffffff;
     flex-direction:column;
-    align-items:center;
-    gap:22px;
-    padding:25px 0;
-    display:none;
-    box-shadow:0 10px 30px rgba(0,0,0,.1);
+    gap:15px;
+    margin-top:15px;
   }
 
-  .nav-links a{
-    color:#111;
-    margin:0;
-  }
+  .title{font-size:42px;}
+  .hero-logo{height:140px;}
+  .impact-grid{flex-direction:column;gap:40px;}
+  .feature-box{flex-direction:column;}
 
-  .nav-links.active{
-    display:flex;
-  }
+}
 
+/* ================= CONTACT PAGE ================= */
+
+.contact-container{
+  max-width:700px;
+  margin:80px auto;
+  padding:40px;
+  background:var(--bg-soft);
+  border-radius:18px;
+  text-align:left;
+}
+
+.contact-container h1{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:14px 16px;
+  background:#111;
+  border:1px solid #333;
+  border-radius:8px;
+  color:white;
+  font-family:'Inter',sans-serif;
+  font-size:14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline:none;
+  border-color:var(--accent);
+}
+
+.contact-form button{
+  margin-top:10px;
+  padding:14px;
+  background:var(--accent);
+  border:none;
+  border-radius:30px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s ease;
+}
+
+.contact-form button:hover{
+  transform:translateY(-3px);
+}
+
+/* ================= MISSION PAGE ================= */
+
+.mission-section{
+  background:linear-gradient(to bottom, #f4f1ea, #eae4d9);
+  padding:140px 20px;
+  display:flex;
+  justify-content:center;
+}
+
+.mission-content{
+  max-width:800px;
+  text-align:center;
+}
+
+.mission-content h1{
+  font-size:48px;
+  margin-bottom:30px;
+  color:#1f1f1f;
+}
+
+.mission-text{
+  font-size:20px;
+  line-height:1.9;
+  color:#444;
+}
+
+.mission-text strong{
+  color:var(--accent);
+}
+
+/* MERCH PRODUCT IMAGE */
+
+.product-image img {
+  width:100%;
+  max-width:400px;
+  border-radius:16px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.25);
+}
+
+/* MERCH PRODUCT IMAGE SIZE FIX */
+
+.product-image img {
+  width:100%;
+  max-width:400px;
+  border-radius:16px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.25);
 }
