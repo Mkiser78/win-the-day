@@ -286,26 +286,74 @@ footer{
 
 /* ================= MOBILE ================= */
 
+/* ================= MOBILE ================= */
+
 @media(max-width:768px){
 
   nav{
-    flex-direction:column;
+    position:relative;
     padding:20px;
   }
 
-  .nav-links{
+  /* HAMBURGER */
+  .hamburger{
+    display:flex;
     flex-direction:column;
-    gap:15px;
-    margin-top:15px;
+    gap:5px;
+    cursor:pointer;
+    position:absolute;
+    right:20px;
+    top:25px;
   }
 
+  .hamburger span{
+    width:25px;
+    height:3px;
+    background:#1f1f1f;
+    border-radius:2px;
+    transition:all .3s ease;
+  }
+
+  .hamburger.active span:nth-child(1){
+    transform:rotate(45deg) translate(5px,5px);
+  }
+
+  .hamburger.active span:nth-child(2){
+    opacity:0;
+  }
+
+  .hamburger.active span:nth-child(3){
+    transform:rotate(-45deg) translate(6px,-6px);
+  }
+
+  /* NAV LINKS DROPDOWN */
+  .nav-links{
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:white;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    padding:20px 0;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+    border-bottom:1px solid #ddd;
+  }
+
+  .nav-links.active{
+    max-height:500px;
+  }
+
+  /* Other mobile adjustments */
   .title{font-size:42px;}
-  .hero-logo{height:140px;}
+  .hero-logo{height:160px;}
   .impact-grid{flex-direction:column;gap:40px;}
   .feature-box{flex-direction:column;}
 
 }
-
 /* ================= CONTACT PAGE ================= */
 
 .contact-container{
