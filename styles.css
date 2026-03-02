@@ -286,26 +286,51 @@ footer{
 
 /* ================= MOBILE ================= */
 
+/* ================= MOBILE ================= */
+
 @media(max-width:768px){
 
   nav{
-    flex-direction:column;
+    position:relative;
     padding:20px;
   }
 
+  .hamburger{
+    display:block;
+    position:absolute;
+    right:20px;
+    top:25px;
+    font-size:28px;
+    cursor:pointer;
+  }
+
   .nav-links{
+    display:none;
     flex-direction:column;
-    gap:15px;
-    margin-top:15px;
+    width:100%;
+    background:#ffffff;
+    position:absolute;
+    top:80px;
+    left:0;
+    padding:20px 0;
+    border-bottom:1px solid #ddd;
+  }
+
+  .nav-links a{
+    color:#111;
+    padding:10px 0;
+    margin:0;
+  }
+
+  .nav-links.active{
+    display:flex;
   }
 
   .title{font-size:42px;}
-  .hero-logo{height:140px;}
+  .hero-logo{height:170px;}
   .impact-grid{flex-direction:column;gap:40px;}
   .feature-box{flex-direction:column;}
-
 }
-
 /* ================= CONTACT PAGE ================= */
 
 .contact-container{
