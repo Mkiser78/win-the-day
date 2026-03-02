@@ -399,3 +399,12 @@ footer{
   border-radius:16px;
   box-shadow:0 25px 60px rgba(0,0,0,0.25);
 }
+
+/* MERCH PRODUCT IMAGE SIZE FIX */
+
+.product-image img {
+  width:100%;
+  max-width:400px;
+  border-radius:16px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.25);
+}
