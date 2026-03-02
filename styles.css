@@ -1,14 +1,15 @@
 /* ================= ROOT ================= */
 
 :root{
-  --bg-main:#f4f1ea;          /* warm light background */
-  --bg-soft:#ffffff;          /* clean section background */
-  --bg-darker:#ece7dd;        /* subtle section contrast */
-  --accent:#c89b3c;           /* strong gold */
+  --bg-main:#f4f1ea;
+  --bg-soft:#ffffff;
+  --bg-darker:#ece7dd;
+  --accent:#c89b3c;
   --accent-soft:#e7c16f;
   --text-main:#1f1f1f;
   --text-muted:#5c5c5c;
 }
+
 /* ================= GLOBAL ================= */
 
 html,body{
@@ -74,7 +75,7 @@ nav{
 
 .nav-links a{
   position:relative;
-  color:var(--text-muted);
+  color:#cfcfcf;
   margin-left:30px;
   text-decoration:none;
   font-size:14px;
@@ -134,6 +135,7 @@ nav{
   inset:0;
   background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55));
 }
+
 .hero-content{
   position:relative;
   z-index:2;
@@ -150,6 +152,7 @@ nav{
   letter-spacing:5px;
   color:#eaeaea;
 }
+
 .title{
   font-size:62px;
   font-weight:800;
@@ -157,12 +160,14 @@ nav{
   color:#ffffff;
   text-shadow:0 4px 25px rgba(0,0,0,.6);
 }
+
 .subtext{
   font-size:20px;
   margin-top:10px;
   color:#f5f5f5;
   text-shadow:0 2px 15px rgba(0,0,0,.6);
 }
+
 /* ================= BUTTONS ================= */
 
 .button{
@@ -227,6 +232,7 @@ nav{
   font-size:12px;
   letter-spacing:2px;
   text-transform:uppercase;
+  color:#ddd;
 }
 
 /* ================= FEATURED ================= */
@@ -244,15 +250,6 @@ nav{
   border-radius:18px;
 }
 
-/* ================= INVOLVED ================= */
-
-.involved-grid{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:30px;
-}
-
 /* ================= SOCIAL ================= */
 
 .social-links{
@@ -264,7 +261,7 @@ nav{
 
 .social-links a{
   font-size:28px;
-  color:var(--text-muted);
+  color:#666;
   transition:.3s ease;
 }
 
@@ -284,7 +281,22 @@ footer{
   color:#777;
 }
 
-/* ================= MOBILE ================= */
+/* ================= HAMBURGER ================= */
+
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+}
+
+.hamburger span{
+  width:25px;
+  height:3px;
+  background:#fff;
+  border-radius:2px;
+  transition:.3s ease;
+}
 
 /* ================= MOBILE ================= */
 
@@ -295,23 +307,11 @@ footer{
     padding:20px;
   }
 
-  /* HAMBURGER */
   .hamburger{
     display:flex;
-    flex-direction:column;
-    gap:5px;
-    cursor:pointer;
     position:absolute;
     right:20px;
     top:25px;
-  }
-
-  .hamburger span{
-    width:25px;
-    height:3px;
-    background:#1f1f1f;
-    border-radius:2px;
-    transition:all .3s ease;
   }
 
   .hamburger.active span:nth-child(1){
@@ -326,13 +326,12 @@ footer{
     transform:rotate(-45deg) translate(6px,-6px);
   }
 
-  /* NAV LINKS DROPDOWN */
   .nav-links{
     position:absolute;
     top:80px;
     left:0;
     width:100%;
-    background:white;
+    background:#fff;
     flex-direction:column;
     align-items:center;
     gap:20px;
@@ -343,153 +342,16 @@ footer{
     border-bottom:1px solid #ddd;
   }
 
+  .nav-links a{
+    color:#111;
+  }
+
   .nav-links.active{
     max-height:500px;
   }
 
-  /* Other mobile adjustments */
   .title{font-size:42px;}
-  .hero-logo{height:160px;}
+  .hero-logo{height:170px;}
   .impact-grid{flex-direction:column;gap:40px;}
   .feature-box{flex-direction:column;}
-
-}
-/* ================= CONTACT PAGE ================= */
-
-.contact-container{
-  max-width:700px;
-  margin:80px auto;
-  padding:40px;
-  background:var(--bg-soft);
-  border-radius:18px;
-  text-align:left;
-}
-
-.contact-container h1{
-  text-align:center;
-  margin-bottom:40px;
-}
-
-.contact-form{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-}
-
-.contact-form input,
-.contact-form textarea{
-  width:100%;
-  padding:14px 16px;
-  background:#111;
-  border:1px solid #333;
-  border-radius:8px;
-  color:white;
-  font-family:'Inter',sans-serif;
-  font-size:14px;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus{
-  outline:none;
-  border-color:var(--accent);
-}
-
-.contact-form button{
-  margin-top:10px;
-  padding:14px;
-  background:var(--accent);
-  border:none;
-  border-radius:30px;
-  font-weight:600;
-  cursor:pointer;
-  transition:.3s ease;
-}
-
-.contact-form button:hover{
-  transform:translateY(-3px);
-}
-
-/* ================= MISSION PAGE ================= */
-
-.mission-section{
-  background:linear-gradient(to bottom, #f4f1ea, #eae4d9);
-  padding:140px 20px;
-  display:flex;
-  justify-content:center;
-}
-
-.mission-content{
-  max-width:800px;
-  text-align:center;
-}
-
-.mission-content h1{
-  font-size:48px;
-  margin-bottom:30px;
-  color:#1f1f1f;
-}
-
-.mission-text{
-  font-size:20px;
-  line-height:1.9;
-  color:#444;
-}
-
-.mission-text strong{
-  color:var(--accent);
-}
-
-/* MERCH PRODUCT IMAGE */
-
-.product-image img {
-  width:100%;
-  max-width:400px;
-  border-radius:16px;
-  box-shadow:0 25px 60px rgba(0,0,0,0.25);
-}
-
-/* MERCH PRODUCT IMAGE SIZE FIX */
-
-.product-image img {
-  width:100%;
-  max-width:400px;
-  border-radius:16px;
-  box-shadow:0 25px 60px rgba(0,0,0,0.25);
-}
-
-/* ================= HAMBURGER ================= */
-
-.hamburger{
-  display:none;
-  flex-direction:column;
-  gap:5px;
-  cursor:pointer;
-}
-
-.hamburger span{
-  width:25px;
-  height:3px;
-  background:#1f1f1f;
-  border-radius:2px;
-}
-
-/* ================= MOBILE NAV ================= */
-
-@media(max-width:768px){
-
-  .hamburger{
-    display:flex;
-  }
-
-  .nav-links{
-    display:none;
-    flex-direction:column;
-    width:100%;
-    margin-top:20px;
-  }
-
-  .nav-links.active{
-    display:flex;
-  }
-
 }
