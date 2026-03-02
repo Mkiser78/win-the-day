@@ -360,3 +360,33 @@ footer{
 .contact-form button:hover{
   transform:translateY(-3px);
 }
+
+/* ================= MISSION PAGE ================= */
+
+.mission-section{
+  background:linear-gradient(to bottom, #f4f1ea, #eae4d9);
+  padding:140px 20px;
+  display:flex;
+  justify-content:center;
+}
+
+.mission-content{
+  max-width:800px;
+  text-align:center;
+}
+
+.mission-content h1{
+  font-size:48px;
+  margin-bottom:30px;
+  color:#1f1f1f;
+}
+
+.mission-text{
+  font-size:20px;
+  line-height:1.9;
+  color:#444;
+}
+
+.mission-text strong{
+  color:var(--accent);
+}
