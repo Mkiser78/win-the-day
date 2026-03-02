@@ -1,13 +1,13 @@
 /* ================= ROOT ================= */
 
 :root{
-  --bg-main:#1f2326;          /* softer charcoal */
-  --bg-soft:#262b2f;          /* warm dark slate */
-  --bg-darker:#1a1e21;        /* subtle depth */
-  --accent:#f5c96a;           /* warmer gold */
-  --accent-soft:#ffe2a6;      /* soft highlight gold */
-  --text-main:#f9f9f9;
-  --text-muted:#c7c7c7;
+  --bg-main:#f4f1ea;          /* warm light background */
+  --bg-soft:#ffffff;          /* clean section background */
+  --bg-darker:#ece7dd;        /* subtle section contrast */
+  --accent:#c89b3c;           /* strong gold */
+  --accent-soft:#e7c16f;
+  --text-main:#1f1f1f;
+  --text-muted:#5c5c5c;
 }
 /* ================= GLOBAL ================= */
 
