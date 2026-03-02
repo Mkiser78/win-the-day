@@ -1,15 +1,14 @@
 /* ================= ROOT ================= */
 
 :root{
-  --bg-main:#181818;
-  --bg-soft:#202020;
-  --bg-darker:#151515;
-  --accent:#e4b75e;
-  --accent-soft:#f0cf84;
-  --text-main:#f5f5f5;
-  --text-muted:#b9b9b9;
+  --bg-main:#1f2326;          /* softer charcoal */
+  --bg-soft:#262b2f;          /* warm dark slate */
+  --bg-darker:#1a1e21;        /* subtle depth */
+  --accent:#f5c96a;           /* warmer gold */
+  --accent-soft:#ffe2a6;      /* soft highlight gold */
+  --text-main:#f9f9f9;
+  --text-muted:#c7c7c7;
 }
-
 /* ================= GLOBAL ================= */
 
 html,body{
