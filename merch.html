@@ -5,13 +5,19 @@
 <title>Shop | Win the Day</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
 html, body {
   margin:0;
   padding:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:black;
+  font-family:'Inter', sans-serif;
+  background:#0b0b0b;
   color:white;
+}
+
+h1, h2, h3 {
+  font-family:'Montserrat', sans-serif;
 }
 
 /* NAV */
@@ -19,134 +25,160 @@ nav {
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:18px 40px;
-  background:black;
+  padding:22px 8%;
+  background:#000;
 }
 
-.nav-logo img { height:70px; }
+.nav-logo img { height:65px; }
 
 .nav-links a {
-  position:relative;
-  color:#facc15;
+  color:#d4af37;
   margin-left:30px;
   text-decoration:none;
-  font-weight:bold;
-}
-
-.nav-links a::after {
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-4px;
-  width:0%;
-  height:3px;
-  background:#16a34a;
-  transition:0.3s ease;
-}
-
-.nav-links a:hover::after,
-.nav-links a.active::after {
-  width:100%;
-}
-
-/* SHOP SECTION */
-.shop-section {
-  padding:120px 20px;
-  text-align:center;
-}
-
-.shop-section h1 {
-  font-size:52px;
-  margin-bottom:10px;
-}
-
-.shop-section p.subtitle {
-  opacity:0.8;
-  margin-bottom:60px;
-  font-size:18px;
-}
-
-/* PRODUCT CARD */
-.product-card {
-  max-width:900px;
-  margin:0 auto;
-  background:#111;
-  border-radius:18px;
-  padding:60px 40px;
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:center;
-  gap:60px;
-  box-shadow:0 0 40px rgba(0,0,0,0.6);
-}
-
-/* IMAGE WRAPPER */
-.product-image {
-  background:#1a1a1a;
-  padding:30px;
-  border-radius:16px;
-}
-
-.product-image img {
-  width:260px;
-  display:block;
-}
-
-/* PRODUCT DETAILS */
-.product-details {
-  max-width:400px;
-  text-align:left;
-}
-
-.product-details h2 {
-  font-size:28px;
-  margin-bottom:10px;
-}
-
-.price {
-  font-size:22px;
-  color:#facc15;
-  margin-bottom:30px;
-}
-
-/* BUTTONS */
-.button {
-  display:inline-block;
-  margin:10px 0;
-  padding:15px 40px;
-  background:#16a34a;
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:8px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  font-size:14px;
   transition:0.3s;
 }
 
-.button.secondary {
-  background:#facc15;
+.nav-links a:hover,
+.nav-links .active {
+  color:white;
+}
+
+/* HERO */
+.merch-hero {
+  padding:140px 8% 80px 8%;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.merch-hero h1 {
+  font-size:64px;
+  font-weight:900;
+  color:#d4af37;
+  margin-bottom:20px;
+}
+
+.merch-hero p {
+  font-size:20px;
+  opacity:0.8;
+}
+
+/* PRODUCT SECTION */
+.product-section {
+  padding:40px 8% 120px 8%;
+}
+
+.product-grid {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:80px;
+  max-width:1200px;
+  margin:0 auto;
+  flex-wrap:wrap;
+}
+
+.product-image img {
+  width:100%;
+  max-width:420px;
+  border-radius:20px;
+  box-shadow:0 40px 80px rgba(0,0,0,0.6);
+}
+
+.product-details {
+  max-width:520px;
+}
+
+.product-details h2 {
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.price {
+  font-size:34px;
+  color:#d4af37;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.limited {
+  font-size:12px;
+  letter-spacing:3px;
+  opacity:0.6;
+  margin-bottom:25px;
+}
+
+.impact {
+  font-size:18px;
+  line-height:1.7;
+  margin-bottom:30px;
+}
+
+.features {
+  list-style:none;
+  padding:0;
+  margin-bottom:35px;
+}
+
+.features li {
+  margin-bottom:12px;
+  opacity:0.85;
+}
+
+.buy-button {
+  display:block;
+  width:100%;
+  text-align:center;
+  padding:18px 0;
+  background:#d4af37;
+  color:black;
+  text-decoration:none;
+  font-weight:700;
+  border-radius:60px;
+  margin-bottom:20px;
+  transition:0.3s;
+  box-shadow:0 20px 40px rgba(212,175,55,0.25);
+}
+
+.buy-button:hover {
+  transform:translateY(-5px);
+  box-shadow:0 30px 60px rgba(212,175,55,0.4);
+}
+
+.secondary {
+  background:white;
   color:black;
 }
 
-.button:hover {
-  transform:scale(1.05);
-}
-
 .notice {
-  margin-top:30px;
+  margin-top:15px;
   font-size:14px;
   opacity:0.6;
 }
 
+.trust {
+  margin-top:30px;
+  font-size:13px;
+  letter-spacing:1px;
+  opacity:0.5;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:40px 20px;
+  font-size:13px;
+  opacity:0.6;
+  border-top:1px solid #1a1a1a;
+}
+
 /* MOBILE */
 @media(max-width:768px){
-  .product-card{
-    flex-direction:column;
-    text-align:center;
-  }
-  .product-details{
-    text-align:center;
-  }
+  .merch-hero h1 { font-size:42px; }
+  .product-grid { gap:50px; }
 }
 </style>
 </head>
@@ -154,15 +186,14 @@ nav {
 <body>
 
 <nav>
-  <div class="nav-left">
-    <a href="index.html" class="nav-logo">
-      <img src="logo.png">
-    </a>
+  <div class="nav-logo">
+    <a href="index.html"><img src="logo.png"></a>
   </div>
 
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="mission.html">Mission</a>
+    <a href="index.html#events">Events</a>
     <a href="merch.html" class="active">Shop</a>
     <a href="contact.html">Contact</a>
   </div>
@@ -174,44 +205,51 @@ nav {
 </section>
 
 <section class="product-section">
-
   <div class="product-grid">
 
     <div class="product-image">
-      <img src="shirt-front.png" alt="Win the Day T-Shirt">
+      <img src="shirt.png" alt="Win the Day Shirt">
     </div>
 
     <div class="product-details">
       <h2>Win the Day Signature Tee</h2>
-
       <div class="price">$35</div>
+      <div class="limited">LIMITED FIRST DROP</div>
 
-      <p class="impact">
+      <div class="impact">
         100% of profits go directly into men's mental health support,
         events, and brotherhood building.
-      </p>
+      </div>
 
       <ul class="features">
         <li>Premium heavyweight cotton</li>
         <li>Athletic fit</li>
-        <li>Limited release drop</li>
+        <li>Small batch production</li>
       </ul>
 
-      <a href="YOUR_STRIPE_LINK_HERE" target="_blank" class="buy-button">
-        Secure Yours
+      <a href="https://forms.gle/SNeyLwd5mwSF43U99" target="_blank" class="buy-button">
+        Step 1: Select Size
       </a>
 
+      <a href="https://buy.stripe.com/6oUaEZc4n1AYaqk5Klfw400" target="_blank" class="buy-button secondary">
+        Step 2: Complete Payment
+      </a>
+
+      <div class="notice">
+        Orders are processed after BOTH the order form and payment are completed.
+      </div>
+
       <div class="trust">
-        Ships in 3–5 days • Secure Checkout • Small Batch Production
+        Ships in 3–5 days • Secure Checkout • Kentucky Based
       </div>
     </div>
 
   </div>
-
 </section>
 
 <footer>
   © 2026 Win the Day | Strength • Belonging • Action
 </footer>
 
-</body></html>
+</body>
+</html>
