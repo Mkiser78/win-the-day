@@ -579,3 +579,9 @@ section {
   font-size: 1.15rem;
   opacity: 0.9;
 }
+
+/* Hero spacing refinement */
+
+.hero {
+  padding: 160px 20px 140px;
+}
