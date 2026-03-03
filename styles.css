@@ -517,3 +517,29 @@ footer{
   margin: 0 auto;
   font-weight: 300;
 }
+
+/* Subtle section separation */
+
+section {
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.section-dark,
+.section-darker {
+  border-bottom: none;
+}
+
+
+/* Elevated button styling */
+
+.button {
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
