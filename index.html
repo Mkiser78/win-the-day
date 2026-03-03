@@ -170,7 +170,7 @@
   © 2026 Win the Day | Strength • Belonging • Action
 </footer>
 
-<script>
+ <script>
 function getLastSaturday(year, month) {
   const lastDay = new Date(year, month + 1, 0);
   const day = lastDay.getDay();
@@ -191,29 +191,33 @@ function generateMeetings() {
   let month = today.getMonth();
 
   const meetingList = document.getElementById("meetingList");
+  if (!meetingList) return;
+
   meetingList.innerHTML = "";
 
   let nextMeetingSet = false;
   let count = 0;
 
   while (count < 3) {
-    let meetingDate = getLastSaturday(year, month);
+    const meetingDate = getLastSaturday(year, month);
 
     if (meetingDate >= today) {
 
       if (!nextMeetingSet) {
-        document.getElementById("nextMeeting").innerHTML =
-          formatDate(meetingDate) + " • 11AM – 2PM • Rowan County Public Library";
+        const next = document.getElementById("nextMeeting");
+        if (next) {
+          next.innerHTML =
+            formatDate(meetingDate) + " • 11AM – 2PM • Rowan County Public Library";
+        }
         nextMeetingSet = true;
       }
 
       const card = document.createElement("div");
       card.className = "event-card";
 
-      card.innerHTML = `
-        <h3>${formatDate(meetingDate)}</h3>
-        <p>Rowan County Public Library | 11AM – 2PM</p>
-      `;
+      card.innerHTML =
+        "<h3>" + formatDate(meetingDate) + "</h3>" +
+        "<p>Rowan County Public Library | 11AM – 2PM</p>";
 
       meetingList.appendChild(card);
       count++;
@@ -226,6 +230,9 @@ function generateMeetings() {
     }
   }
 }
+
+generateMeetings();
+</script>
 <script>
 function getLastSaturday(year, month) {
   
