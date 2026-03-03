@@ -585,3 +585,18 @@ section {
 .hero {
   padding: 160px 20px 140px;
 }
+
+/* Elegant impact section refinement */
+
+.impact-item h3 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.impact-item p {
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
