@@ -345,7 +345,7 @@ footer{
   }
 
   .title{font-size:42px;}
-  .hero-logo{height:160px;}
+  .hero-logo{height:200px;}
   .impact-grid{flex-direction:column;gap:40px;}
   .feature-box{flex-direction:column;}
 }
