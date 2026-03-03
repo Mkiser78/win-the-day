@@ -284,6 +284,14 @@ footer{
   color:#777;
 }
 
+/* ================= HAMBURGER BASE ================= */
+
+.hamburger{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+  color:white;
+}
 /* ================= MOBILE ================= */
 
 /* ================= MOBILE ================= */
