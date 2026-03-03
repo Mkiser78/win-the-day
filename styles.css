@@ -539,3 +539,25 @@ section {
 .button:hover {
   transform: translateY(-2px);
 }
+
+/* Hero refinement */
+
+.hero .statement {
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.hero .title {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  letter-spacing: 2px;
+  margin: 20px 0;
+}
+
+.hero .subtext {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
