@@ -186,8 +186,10 @@ nav{
 
 .section-dark{background:var(--bg-soft);}
 .section-darker{background:var(--bg-darker);}
-
-.event-card,
+.section-dark,
+.section-darker{
+  box-shadow:0 8px 30px rgba(0,0,0,0.05);
+}.event-card,
 .involved-card{
   background:var(--bg-soft);
   padding:38px;
