@@ -126,17 +126,6 @@ nav{
 .nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
-}.nav-donate{
-  border:1px solid var(--accent);
-  padding:8px 22px;
-  border-radius:30px;
-  color:var(--accent)!important;
-  transition:.3s ease;
-}
-
-.nav-donate:hover{
-  background:var(--accent);
-  color:#111!important;
 }
 
 /* Premium section headings */
