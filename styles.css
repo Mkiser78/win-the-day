@@ -188,15 +188,17 @@ h2 {
 
 .statement{
   font-size:13px;
-  letter-spacing:5px;
+  letter-spacing:2px;   /* was 5px */
   color:#eaeaea;
+  font-weight:500;
 }
+
 .title{
-  font-size:62px;
-  font-weight:800;
-  margin:18px 0;
+  font-size:58px;       /* slightly reduced */
+  font-weight:600;      /* was 800 */
+  margin:16px 0 18px;
   color:#ffffff;
-  text-shadow:0 4px 25px rgba(0,0,0,.6);
+  text-shadow:none;     /* remove heavy glow */
 }
 .subtext{
   font-size:20px;
