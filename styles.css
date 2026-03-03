@@ -284,6 +284,7 @@ footer{
   color:#777;
 }
 
+
 /* ================= HAMBURGER BASE ================= */
 
 .hamburger{
@@ -291,6 +292,18 @@ footer{
   font-size:28px;
   cursor:pointer;
   color:white;
+}
+/* HAMBURGER DEFAULT (DESKTOP) */
+.hamburger{
+  display:none;
+}
+
+.hamburger span{
+  display:block;
+  width:26px;
+  height:3px;
+  background:#ffffff;
+  margin:5px 0;
 }
 /* ================= MOBILE ================= */
 
