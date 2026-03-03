@@ -561,3 +561,19 @@ section {
   margin: 0 auto 30px;
   line-height: 1.6;
 }
+
+/* Refined hero spacing after shortening */
+
+.hero .statement {
+  margin-bottom: 15px;
+}
+
+.hero .title {
+  margin: 10px 0 20px;
+}
+
+.hero .subtext {
+  margin-bottom: 30px;
+  font-size: 1.15rem;
+  opacity: 0.9;
+}
