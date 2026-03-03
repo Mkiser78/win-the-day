@@ -2,15 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Win the Day</title>
+<title>Get Involved | Win the Day</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta property="og:title" content="Win the Day | Men's Mental Strength Movement">
-<meta property="og:description" content="Building strength, connection, and resilience in men. Stand shoulder to shoulder. Win the Day — Together.">
-<meta property="og:image" content="https://wintheday.site/social-preview.png">
-<meta property="og:url" content="https://wintheday.site/">
-<meta property="og:type" content="website">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -23,8 +16,7 @@
     <a href="index.html" class="nav-logo">
       <img src="logo.png">
     </a>
-
-    <a href="#support" class="nav-donate">Donate</a>
+    <a href="index.html#support" class="nav-donate">Donate</a>
   </div>
 
   <div class="hamburger" onclick="toggleMenu()">
@@ -34,188 +26,45 @@
   </div>
 
   <div class="nav-links">
-    <a href="index.html" class="active">Home</a>
+    <a href="index.html">Home</a>
     <a href="mission.html">Mission</a>
-    <a href="#events">Events</a>
-    <a href="get-involved.html">Get Involved</a>
+    <a href="events.html">Events</a>
+    <a href="get-involved.html" class="active">Get Involved</a>
     <a href="merch.html">Shop</a>
     <a href="contact.html">Contact</a>
   </div>
 </nav>
 
-<section class="hero">
-  <div class="hero-content">
-    <img src="logo.png" class="hero-logo">
-    <div class="statement">YOU DON’T HAVE TO CARRY IT ALONE.</div>
-    <div class="title">WIN THE DAY</div>
-    <div class="subtext">
-      Real conversations. Real strength.
-      A room full of men choosing to grow.
-    </div>
-    <a href="#events" class="button">Find Your Seat</a>
-  </div>
-</section>
-
-<section class="section-darker" id="support">
-  <h2>Support the Mission</h2>
-  <p style="max-width:700px;margin:0 auto;">
-    Every dollar strengthens men in our community.
-    100% goes toward building brotherhood and mental health support.
+<section class="section-dark">
+  <h1>Get Involved</h1>
+  <p style="max-width:700px;margin:20px auto 60px;">
+    Brotherhood is built through action. Choose your next step.
   </p>
 
-  <div class="donation-buttons">
-    <a href="https://buy.stripe.com/fZu5kF6K3cfCdCw6Opfw402" target="_blank" class="button">$10 — Brotherhood Supporter</a>
-    <a href="https://buy.stripe.com/aFaaEZgkD3J6buo4Ghfw401" target="_blank" class="button">$25 — Meeting Sponsor</a>
-    <a href="https://buy.stripe.com/fZu8wRgkDfrOcysfkVfw403" target="_blank" class="button">$50 — Strength Builder</a>
-    <a href="https://buy.stripe.com/6oU14p4BV0wU560dcNfw404" target="_blank" class="button">$100 — Community Champion</a>
-  </div>
-
-  <div style="margin-top:60px;">
-    <h3 style="color:#facc15;">Become a Monthly Brotherhood Supporter</h3>
-    <p>Consistent monthly support allows us to expand meetings and impact.</p>
-    <a href="https://buy.stripe.com/fZu8wRgkDfrOcysfkVfw403" target="_blank" class="button">
-      Become a Monthly Supporter
-    </a>
-  </div>
-</section>
-
-<section class="why-exist">
-  <h2>Why We Exist</h2>
-  <div class="why-text">
-    To build supportive relationships.<br>
-    To create brotherhood.<br>
-    To strengthen the men who strengthen our community.
-  </div>
-</section>
-
-<section class="impact-strip">
-  <div class="impact-grid">
-    <div class="impact-item">
-      <h3>1</h3>
-      <p>Meeting</p>
+  <div class="involved-grid">
+    <div class="involved-card">
+      <h3>Attend</h3>
+      <p>Show up. Speak up. Grow stronger together.</p>
+      <a href="contact.html?type=attend" class="button">Attend</a>
     </div>
-    <div class="impact-item">
-      <h3>5+</h3>
-      <p>Men Helped</p>
+
+    <div class="involved-card">
+      <h3>Volunteer</h3>
+      <p>Help build something that changes lives.</p>
+      <a href="contact.html?type=volunteer" class="button">Volunteer</a>
     </div>
-    <div class="impact-item">
-      <h3>100%</h3>
-      <p>Volunteer Led</p>
-    </div>
-    <div class="impact-item">
-      <h3>KY</h3>
-      <p>Based in Eastern Kentucky</p>
+
+    <div class="involved-card">
+      <h3>Partner</h3>
+      <p>Back a movement that builds strength in men.</p>
+      <a href="contact.html?type=partner" class="button">Partner</a>
     </div>
   </div>
 </section>
-
-<section class="next-meeting">
-  <h2>Next Support Group</h2>
-  <p id="nextMeeting"></p>
-  <div class="meeting-subline">
-    Free • Confidential • No Registration Required
-  </div>
-</section>
-
-<section class="section-dark">
-  <h2>“What we're doing may save a life.”</h2>
-</section>
-
-<section class="section-darker">
-  <div class="featured-badge">FEATURED EVENT</div>
-  <h2>Rock Your Mental</h2>
-
-  <div class="feature-box">
-    <img src="Rock your mental.png" alt="Rock Your Mental Event Flyer">
-    <div class="feature-details">
-      <p><strong>June 13, 2026 | 4:00PM – 10:00PM</strong></p>
-      <p>Carl Perkins Center, Morehead, KY</p>
-      <p>Live music. Food. Breaking stigma. Building brotherhood.</p>
-
-      <a href="#support" class="button" style="margin-top:20px;">
-        Support the Mission
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="section-darker" id="events">
-  <h2>Support Groups</h2>
-  <div id="meetingList"></div>
-</section>
-
-<div class="social-links">
-  <a href="https://www.facebook.com/profile.php?id=61588261523468" target="_blank"><i class="fab fa-facebook-f"></i></a>
-  <a href="https://www.instagram.com/wintheday5230/" target="_blank"><i class="fab fa-instagram"></i></a>
-</div>
 
 <footer>
   © 2026 Win the Day | Strength • Belonging • Action
 </footer>
-
-<script>
-function getLastSaturday(year, month) {
-  const lastDay = new Date(year, month + 1, 0);
-  const day = lastDay.getDay();
-  const diff = day >= 6 ? day - 6 : day + 1;
-  return new Date(year, month + 1, 0 - diff);
-}
-
-function formatDate(date) {
-  return date.toLocaleDateString('en-US', {
-    month: 'long',
-    day: 'numeric'
-  });
-}
-
-function generateMeetings() {
-  const today = new Date();
-  let year = today.getFullYear();
-  let month = today.getMonth();
-
-  const meetingList = document.getElementById("meetingList");
-  if (!meetingList) return;
-
-  meetingList.innerHTML = "";
-
-  let nextMeetingSet = false;
-  let count = 0;
-
-  while (count < 3) {
-    const meetingDate = getLastSaturday(year, month);
-
-    if (meetingDate >= today) {
-
-      if (!nextMeetingSet) {
-        const next = document.getElementById("nextMeeting");
-        if (next) {
-          next.innerHTML =
-            formatDate(meetingDate) + " • 11AM – 2PM • Rowan County Public Library";
-        }
-        nextMeetingSet = true;
-      }
-
-      const card = document.createElement("div");
-      card.className = "event-card";
-
-      card.innerHTML =
-        "<h3>" + formatDate(meetingDate) + "</h3>" +
-        "<p>Rowan County Public Library | 11AM – 2PM</p>";
-
-      meetingList.appendChild(card);
-      count++;
-    }
-
-    month++;
-    if (month > 11) {
-      month = 0;
-      year++;
-    }
-  }
-}
-
-generateMeetings();
-</script>
 
 <script>
 function toggleMenu(){
