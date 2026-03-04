@@ -71,28 +71,7 @@
   © 2026 Win the Day | Strength • Belonging • Action
 </footer>
 
-<script>
-let selectedSize = "";
 
-function selectSize(button) {
-  document.querySelectorAll('.size-btn').forEach(btn => {
-    btn.classList.remove('active-size');
-  });
-
-  button.classList.add('active-size');
-  selectedSize = button.textContent;
-
-  // 🔥 Replace these with your real Stripe links per size
-  const stripeLinks = {
-    S: "PASTE_STRIPE_LINK_SMALL",
-    M: "PASTE_STRIPE_LINK_MEDIUM",
-    L: "PASTE_STRIPE_LINK_LARGE",
-    XL: "PASTE_STRIPE_LINK_XL"
-  };
-
-  document.getElementById("checkoutBtn").href = stripeLinks[selectedSize];
-}
-</script>
 
 </body>
 </html>
