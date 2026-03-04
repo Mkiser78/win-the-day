@@ -702,6 +702,10 @@ section {
   color:var(--accent);
   margin:10px 0 20px 0;
 }
+
+.product-details{
+  line-height:1.6;
+}
 /* Product image card */
 
 .product-image{
