@@ -711,3 +711,23 @@ section {
 .product-image img:hover{
   transform:scale(1.05);
 }
+
+/* MOBILE FIX FOR MERCH PAGE */
+
+@media (max-width: 768px){
+
+  .product-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+    text-align:center;
+  }
+
+  .product-details{
+    max-width:100%;
+  }
+
+  .product-image img{
+    max-width:320px;
+  }
+
+}
