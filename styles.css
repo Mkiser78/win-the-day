@@ -645,3 +645,16 @@ section {
   background: #facc15;
   color: #111;
 }
+
+/* Fix size alignment inside product details */
+
+.size-section {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.sizes {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
