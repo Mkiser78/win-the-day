@@ -750,3 +750,27 @@ section {
   }
 
 }
+/* WHAT TO EXPECT SECTION */
+
+.expect-grid{
+  max-width:1000px;
+  margin:40px auto 0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  text-align:left;
+}
+
+.expect-item h3{
+  font-size:16px;
+  margin-bottom:8px;
+  color:#facc15;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.expect-item p{
+  font-size:15px;
+  line-height:1.6;
+  color:#d4d4d4;
+}
