@@ -748,7 +748,9 @@ section {
   .product-image img{
     max-width:320px;
   }
-
+  .expect-grid{
+  grid-template-columns:1fr;
+}
 }
 /* WHAT TO EXPECT SECTION */
 
