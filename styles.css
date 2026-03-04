@@ -718,12 +718,14 @@ section {
 
   .product-grid{
     grid-template-columns:1fr;
-    gap:40px;
+    gap:50px;
     text-align:center;
   }
 
   .product-details{
     max-width:100%;
+    text-align:center;
+    padding:0 20px;
   }
 
   .product-image img{
@@ -731,7 +733,6 @@ section {
   }
 
 }
-
 
 
   .nav-links.active{
