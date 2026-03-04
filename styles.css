@@ -700,6 +700,9 @@ section {
   transition:transform .35s ease;
 }
 
+.product-details{
+  max-width:500px;
+}
 .product-image img:hover{
   transform:scale(1.05);
 }
