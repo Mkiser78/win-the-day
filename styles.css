@@ -662,3 +662,22 @@ section {
 .product-details {
   text-align: left;
 }
+
+/* Merch page layout improvements */
+
+.merch-hero{
+  padding:90px 20px 60px;
+  text-align:center;
+}
+
+.product-section{
+  max-width:1100px;
+  margin:auto;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
