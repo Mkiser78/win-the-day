@@ -490,6 +490,12 @@ footer{
   justify-content:center;
   align-items:center;
 }
+.product-image img{
+  max-width:80%;
+  height:auto;
+  display:block;
+  margin:auto;
+}
 /* MERCH PRODUCT IMAGE SIZE FIX */
 
 .product-image img {
