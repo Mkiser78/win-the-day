@@ -658,3 +658,7 @@ section {
   gap: 14px;
   margin-top: 10px;
 }
+
+.product-details {
+  text-align: left;
+}
