@@ -53,13 +53,23 @@
         <li>Small batch production</li>
       </ul>
 
-    
+      <!-- SIZE SELECTION -->
+      <div class="size-section">
+        <h3>Select Size</h3>
+        <div class="sizes">
+          <button class="size-btn" onclick="selectSize(this)">S</button>
+          <button class="size-btn" onclick="selectSize(this)">M</button>
+          <button class="size-btn" onclick="selectSize(this)">L</button>
+          <button class="size-btn" onclick="selectSize(this)">XL</button>
+        </div>
+      </div>
 
-   <a href="#sizes" class="button">Select Your Size</a>
-<a href="YOUR_STRIPE_LINK" class="button">Complete Payment</a>
+      <a id="checkoutBtn" href="#" class="button">Complete Payment</a>
+
       <div class="trust">
         Ships in 3–5 days • Secure Checkout • Kentucky Based
       </div>
+
     </div>
 
   </div>
@@ -68,6 +78,29 @@
 <footer>
   © 2026 Win the Day | Strength • Belonging • Action
 </footer>
+
+<script>
+let selectedSize = "";
+
+function selectSize(button) {
+  document.querySelectorAll('.size-btn').forEach(btn => {
+    btn.classList.remove('active-size');
+  });
+
+  button.classList.add('active-size');
+  selectedSize = button.textContent;
+
+  // 🔥 Replace these with your real Stripe links per size
+  const stripeLinks = {
+    S: "PASTE_STRIPE_LINK_SMALL",
+    M: "PASTE_STRIPE_LINK_MEDIUM",
+    L: "PASTE_STRIPE_LINK_LARGE",
+    XL: "PASTE_STRIPE_LINK_XL"
+  };
+
+  document.getElementById("checkoutBtn").href = stripeLinks[selectedSize];
+}
+</script>
 
 </body>
 </html>
