@@ -690,6 +690,18 @@ section {
   align-items:center;
 }
 
+.product-details h2{
+  font-size:32px;
+  font-weight:700;
+  letter-spacing:1px;
+  margin-bottom:10px;
+}
+.price{
+  font-size:28px;
+  font-weight:700;
+  color:var(--accent);
+  margin:10px 0 20px 0;
+}
 /* Product image card */
 
 .product-image{
@@ -712,6 +724,8 @@ section {
   transform:scale(1.05);
 }
 
+
+
 /* MOBILE FIX FOR MERCH PAGE */
 
 @media (max-width: 768px){
@@ -730,13 +744,6 @@ section {
 
   .product-image img{
     max-width:320px;
-  }
-
-}
-
-
-  .nav-links.active{
-    display:flex;
   }
 
 }
