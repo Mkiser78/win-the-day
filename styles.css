@@ -797,3 +797,16 @@ section {
   background:rgba(255,255,255,0.06);
   transform:translateY(-3px);
 }
+.mission-pillars{
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.mission-pillars span{
+  color:#facc15;
+}
