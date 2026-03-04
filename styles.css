@@ -482,7 +482,7 @@ footer{
 /* MERCH PRODUCT IMAGE */
 
 .product-image{
-  background:#f7f7f7;
+  background:transparent;
   padding:50px;
   border-radius:20px;
   box-shadow:0 12px 35px rgba(0,0,0,0.08);
