@@ -24,7 +24,9 @@ section{
   padding:90px 20px;
   text-align:center;
 }
-p{
+section + section{
+  margin-top:20px;
+}p{
   line-height:1.7;
 }h1,h2,h3,.title{
   font-family:'Montserrat',sans-serif;
