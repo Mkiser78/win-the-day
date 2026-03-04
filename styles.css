@@ -693,7 +693,7 @@ section {
 /* Product image card */
 
 .product-image{
-  background:#f4f4f4;
+  background:transparent;
   padding:40px;
   border-radius:18px;
   box-shadow:0 15px 40px rgba(0,0,0,0.08);
