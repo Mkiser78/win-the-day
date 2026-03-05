@@ -479,6 +479,28 @@ footer{
   margin-bottom:40px;
 }
 
+.mission-pillars{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.mission-pillars span{
+  background:#1f1f1f;
+  color:white;
+  padding:12px 22px;
+  border-radius:40px;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:.5px;
+  transition:all .25s ease;
+}
+
+.mission-pillars span:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 18px rgba(0,0,0,.15);
+}
 .mission-text strong{
   color:var(--accent);
 }
