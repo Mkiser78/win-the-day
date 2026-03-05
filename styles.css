@@ -810,3 +810,65 @@ section {
 .mission-pillars span{
   color:#facc15;
 }
+
+/* =========================
+   Mission Section
+========================= */
+
+.mission-section{
+  padding:120px 20px 100px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:#fafafa;
+}
+
+.mission-content{
+  max-width:800px;
+}
+
+.mission-logo img{
+  width:90px;
+  margin-bottom:20px;
+  opacity:.9;
+}
+
+.mission-section h1{
+  font-family:'Montserrat', sans-serif;
+  font-size:42px;
+  font-weight:800;
+  margin-bottom:25px;
+  letter-spacing:.5px;
+}
+
+.mission-text{
+  font-family:'Inter', sans-serif;
+  font-size:18px;
+  line-height:1.7;
+  color:#555;
+  margin-bottom:40px;
+}
+
+.mission-pillars{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.mission-pillars span{
+  background:#111;
+  color:white;
+  padding:10px 18px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:.5px;
+  transition:.25s;
+}
+
+.mission-pillars span:hover{
+  transform:translateY(-3px);
+  background:#000;
+}
