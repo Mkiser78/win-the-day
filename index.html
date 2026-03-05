@@ -203,9 +203,11 @@ function generateMeetings() {
   let month = today.getMonth();
 
   const meetingList = document.getElementById("meetingList");
-  if (!meetingList) return;
+  const nextMeeting = document.getElementById("nextMeeting");
 
-  meetingList.innerHTML = "";
+  if (meetingList) {
+    meetingList.innerHTML = "";
+  }
 
   let nextMeetingSet = false;
   let count = 0;
@@ -215,23 +217,23 @@ function generateMeetings() {
 
     if (meetingDate >= today) {
 
-      if (!nextMeetingSet) {
-        const next = document.getElementById("nextMeeting");
-        if (next) {
-          next.innerHTML =
-            formatDate(meetingDate) + " • 11AM – 2PM • Rowan County Public Library";
-        }
+      if (!nextMeetingSet && nextMeeting) {
+        nextMeeting.innerHTML =
+          formatDate(meetingDate) + " • 11AM – 2PM • Rowan County Public Library";
         nextMeetingSet = true;
       }
 
-      const card = document.createElement("div");
-      card.className = "event-card";
+      if (meetingList) {
+        const card = document.createElement("div");
+        card.className = "event-card";
 
-      card.innerHTML =
-        "<h3>" + formatDate(meetingDate) + "</h3>" +
-        "<p>Rowan County Public Library | 11AM – 2PM</p>";
+        card.innerHTML =
+          "<h3>" + formatDate(meetingDate) + "</h3>" +
+          "<p>Rowan County Public Library | 11AM – 2PM</p>";
 
-      meetingList.appendChild(card);
+        meetingList.appendChild(card);
+      }
+
       count++;
     }
 
@@ -241,6 +243,7 @@ function generateMeetings() {
       year++;
     }
   }
+}  }
 }
 
 generateMeetings();
