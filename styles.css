@@ -896,3 +896,12 @@ section {
   transform:translateY(-3px);
   background:#000;
 }
+
+/* Sticky Navigation */
+
+nav{
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+}
