@@ -348,12 +348,12 @@ footer{
 
 .hamburger span{
   display:block;
-  width:26px;
+  width:25px;
   height:3px;
-  background:#ffffff;
+  background:#111;
   margin:5px 0;
+  border-radius:2px;
 }
-
 /* ================= MOBILE ================= */
 
 @media(max-width:768px){
