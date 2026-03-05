@@ -61,13 +61,10 @@
 </section>
 
 <script>
-const menu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
-
-menu.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
+function toggleMenu(){
+  const nav = document.querySelector('.nav-links');
+  nav.classList.toggle('active');
+}
 </script>
-
 </body>
 </html>
