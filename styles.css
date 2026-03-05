@@ -458,8 +458,9 @@ footer{
   padding:140px 20px;
   display:flex;
   justify-content:center;
+  align-items:center;
+  text-align:center;
 }
-
 .mission-content{
   max-width:800px;
   text-align:center;
