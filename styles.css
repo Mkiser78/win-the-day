@@ -142,25 +142,23 @@ h2 {
 
 /* Premium Donate Button */
 
-.nav-donate {
-  padding: 8px 18px;
-  border: 1px solid #facc15;
-  color: #facc15;
-  border-radius: 3px;
-  font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.25s ease;
+.nav-donate{
+  border:2px solid #facc15;
+  color:#facc15;
+  padding:6px 14px;
+  border-radius:30px;
+  margin-left:15px;
+  font-size:13px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all .25s ease;
 }
 
-.nav-donate{
+.nav-donate:hover{
+  background:#facc15;
   color:#111;
-  text-decoration:none;
-  font-weight:500;
-}
-  /* ================= HERO ================= */
+}  
+/* ================= HERO ================= */
 
 .hero{
   position:relative;
