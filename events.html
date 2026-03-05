@@ -34,9 +34,70 @@ nav a { color:#facc15; text-decoration:none; margin-left:20px; font-weight:bold;
 <a href="meetings.html" class="button">GET INVOLVED</a>
 </section>
 
+<section class="events-header">
+  <h1>Events</h1>
+</section>  
+
+  <section class="section-darker" id="events">
+  <h2>Support Groups</h2>
+  <div id="meetingList"></div>
+</section>
 <div class="footer">
 <p>© 2026 Win the Day</p>
 </div>
 
+  <script>
+function getLastSaturday(year, month) {
+  const lastDay = new Date(year, month + 1, 0);
+  const day = lastDay.getDay();
+  const diff = day >= 6 ? day - 6 : day + 1;
+  return new Date(year, month + 1, 0 - diff);
+}
+
+function formatDate(date) {
+  return date.toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric'
+  });
+}
+
+function generateMeetings() {
+  const today = new Date();
+  let year = today.getFullYear();
+  let month = today.getMonth();
+
+  const meetingList = document.getElementById("meetingList");
+  if (!meetingList) return;
+
+  meetingList.innerHTML = "";
+
+  let count = 0;
+
+  while (count < 6) {
+    const meetingDate = getLastSaturday(year, month);
+
+    if (meetingDate >= today) {
+
+      const card = document.createElement("div");
+      card.className = "event-card";
+
+      card.innerHTML =
+        "<h3>" + formatDate(meetingDate) + "</h3>" +
+        "<p>Rowan County Public Library | 11AM – 2PM</p>";
+
+      meetingList.appendChild(card);
+      count++;
+    }
+
+    month++;
+    if (month > 11) {
+      month = 0;
+      year++;
+    }
+  }
+}
+
+generateMeetings();
+</script>
 </body>
 </html>
