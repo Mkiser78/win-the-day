@@ -461,9 +461,8 @@ footer{
   align-items:center;
   text-align:center;
 }
+
 .mission-content{
-  max-width:800px;
-}.mission-content{
   max-width:800px;
   text-align:center;
 }
@@ -473,7 +472,6 @@ footer{
   margin-bottom:30px;
   color:#1f1f1f;
 }
-
 .mission-text{
   font-size:20px;
   line-height:1.9;
