@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <title>Mission | Win the Day</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-
 
 </head>
 
@@ -17,6 +17,11 @@
     <a href="index.html">
       <img src="logo.png" alt="Win the Day Logo">
     </a>
+  </div>
+
+  <!-- Hamburger Menu -->
+  <div class="menu-toggle" id="mobile-menu">
+    ☰
   </div>
 
   <div class="nav-links">
@@ -42,12 +47,24 @@
       building resilience, and providing tools, community, and purpose
       so men can show up stronger for themselves and those who depend on them.
     </p>
+
     <div class="mission-pillars">
-  <span>Strength</span>
-  <span>Brotherhood</span>
-  <span>Action</span>
-</div>
+      <span>Strength</span>
+      <span>Brotherhood</span>
+      <span>Action</span>
+    </div>
+
   </div>
 </section>
+
+<script>
+const menu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+menu.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+</script>
+
 </body>
 </html>
