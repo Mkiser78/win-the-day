@@ -99,7 +99,7 @@ nav{
 }
 
 .nav-links a:hover{
-  color:#fff;
+  color:#111;
 }
 
 .nav-links a:hover::after{
