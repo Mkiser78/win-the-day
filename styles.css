@@ -99,7 +99,7 @@ nav{
 }
 
 .nav-links a:hover{
-  color:#facc15;
+  color:#111;
 }
 
 .nav-links a:hover::after{
@@ -152,8 +152,7 @@ h2 {
   background:#facc15;
   color:#fff;
 }  
-
-============== HERO ================= */
+/* ================= HERO ================= */
 
 .hero{
   position:relative;
