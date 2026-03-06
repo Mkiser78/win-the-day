@@ -932,3 +932,13 @@ nav{
   transform:translateY(-4px);
   box-shadow:0 10px 25px rgba(0,0,0,.4);
 }
+
+/* subtle donate button glow */
+
+.nav-donate{
+  box-shadow:0 4px 12px rgba(250,204,21,0.25);
+}
+
+.nav-donate:hover{
+  box-shadow:0 6px 18px rgba(250,204,21,0.35);
+}
