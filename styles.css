@@ -835,14 +835,14 @@ section {
 ========================= */
 
 .mission-section{
-  padding:120px 20px 100px;
+  background:#f4f1ea;
+  padding:140px 20px;
   display:flex;
   justify-content:center;
   align-items:center;
   text-align:center;
-  background:#fafafa;
+  min-height:100vh;
 }
-
 .mission-content{
   max-width:800px;
 }
