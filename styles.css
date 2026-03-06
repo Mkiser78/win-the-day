@@ -505,7 +505,7 @@ footer{
 }
 
 .mission-logo img{
-  width:220px;
+  width:220px !important;
   height:auto;
 }
 /* MERCH PRODUCT IMAGE */
