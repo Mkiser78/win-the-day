@@ -153,18 +153,6 @@ h2 {
   color:#fff;
 }  
 
-/* ==  /* upgrade 1 */
-  box-shadow:0 4px 10px rgba(250,204,21,0.25);
-}
-
-.nav-donate:hover{
-  background:#facc15;
-  color:#111;
-
-  /* upgrade 2 */
-  transform:translateY(-2px);
-  box-shadow:0 8px 18px rgba(250,204,21,0.35);
-}
 ============== HERO ================= */
 
 .hero{
