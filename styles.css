@@ -107,12 +107,6 @@ nav{
 }
 /* Premium nav underline */
 
-.nav-links a {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-}
-
 .nav-links a::after {
   content: "";
   position: absolute;
