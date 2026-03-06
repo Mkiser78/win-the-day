@@ -449,8 +449,9 @@ footer{
 /* ================= MISSION PAGE ================= */
 
 .mission-section{
-background :#e3dccf;
-padding:80px 20px 120px  display:flex;
+background :#f4f1ea
+  padding:80px 20px 120px  
+  display:flex;
   justify-content:center;
   align-items:center;
   text-align:center;
