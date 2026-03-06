@@ -942,3 +942,9 @@ nav{
 .nav-donate:hover{
   box-shadow:0 6px 18px rgba(250,204,21,0.35);
 }
+
+/* smoother nav hover */
+
+.nav-links a{
+  transition:color .25s ease;
+}
