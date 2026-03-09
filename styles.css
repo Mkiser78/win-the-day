@@ -155,56 +155,101 @@ h2 {
   background:#facc15;
   color:#fff;
 }  
-/* ================= HERO ================= */
+/* ================= HERO SECTION ================= */
 
 .hero{
   position:relative;
-  height:90vh;
-  background:url("hero.jpg") center/cover no-repeat;
+  min-height:92vh;
   display:flex;
   justify-content:center;
   align-items:center;
   text-align:center;
+  padding:60px 20px;
 
-  padding-top:80px;
+  background:
+    radial-gradient(circle at top, rgba(250,204,21,.18), transparent 60%),
+    url("hero.jpg") center/cover no-repeat;
 }
 
+/* dark overlay for readability */
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55));
+  background:linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.65));
 }
+
+/* content container */
 .hero-content{
   position:relative;
   z-index:2;
-  max-width:820px;
+  max-width:900px;
+  padding:20px;
 }
 
+/* logo */
 .hero-logo{
-  height:310px;
-  margin-bottom:40px;
+  height:260px;
+  margin-bottom:30px;
+  filter:drop-shadow(0 12px 30px rgba(0,0,0,.55))
+         drop-shadow(0 6px 25px rgba(250,204,21,.25));
 }
 
+/* small intro statement */
 .statement{
   font-size:13px;
-  letter-spacing:2px;   /* was 5px */
+  letter-spacing:2px;
   color:#eaeaea;
   font-weight:500;
+  text-transform:uppercase;
+  margin-bottom:10px;
 }
 
+/* main title */
 .title{
-  font-size:58px;       /* slightly reduced */
-  font-weight:600;      /* was 800 */
-  margin:16px 0 18px;
+  font-size:64px;
+  font-weight:700;
+  letter-spacing:3px;
+  margin:18px 0 16px;
   color:#ffffff;
-  text-shadow:none;     /* remove heavy glow */
 }
+
+/* subtitle text */
 .subtext{
   font-size:20px;
   margin-top:10px;
-  color:#f5f5f5;
-  text-shadow:0 2px 15px rgba(0,0,0,.6);
+  color:#d6d6d6;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.5;
+}
+
+/* hero button spacing */
+.hero .button{
+  margin-top:30px;
+}
+
+/* mobile adjustments */
+@media(max-width:768px){
+
+  .hero{
+    min-height:85vh;
+    padding:80px 20px 60px;
+  }
+
+  .hero-logo{
+    height:200px;
+  }
+
+  .title{
+    font-size:42px;
+  }
+
+  .subtext{
+    font-size:18px;
+  }
+
 }
 /* ================= BUTTONS ================= */
 
