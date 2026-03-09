@@ -21,6 +21,9 @@ html,body{
 }
 
 section{
+  border-top:1px solid rgba(0,0,0,.06);
+}
+section{
   padding:90px 20px;
   text-align:center;
 }
