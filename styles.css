@@ -1008,3 +1008,14 @@ nav{
   color:#c89b3c;
   margin-right:6px;
 }
+
+/* Button hover upgrade */
+
+.button{
+  transition:all .25s ease;
+}
+
+.button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
