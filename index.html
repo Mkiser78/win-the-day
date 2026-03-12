@@ -219,8 +219,10 @@ function generateMeetings() {
     if (meetingDate >= today) {
 
       if (!nextMeetingSet && nextMeeting) {
-        nextMeeting.innerHTML =
-          formatDate(meetingDate) + " • 11AM – 2PM • Rowan County Public Library";
+       nextMeeting.innerHTML =
+  '<i class="fas fa-calendar"></i> ' + formatDate(meetingDate) +
+  ' &nbsp;&nbsp; <i class="fas fa-clock"></i> 11AM – 2PM' +
+  ' &nbsp;&nbsp; <i class="fas fa-map-marker-alt"></i> Rowan County Public Library';
         nextMeetingSet = true;
       }
 
