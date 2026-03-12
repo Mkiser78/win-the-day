@@ -1003,3 +1003,8 @@ nav{
 .nav-links a{
   transition:color .25s ease;
 }
+
+#nextMeeting i{
+  color:#c89b3c;
+  margin-right:6px;
+}
